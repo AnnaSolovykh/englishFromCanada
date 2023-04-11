@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.60.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.1",
+    "node-sass": "npm:sass@^1.60.0"
+  }
+}

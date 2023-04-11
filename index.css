@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F6F5F3;
+}
+
+:root {
+    --red: #AA0211;
+    --white: #FFFFFF;
+    --black: #001819;
+    --turquoise: #3D8589;
+    --green: #025359;
+}
+
+header {
+    background-image: url(/resources/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    margin-left: 20rem;
+    height: 11vh;
+}
+
+.nav-headings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 8;
+}
+
+.nav-heading {
+    color: var(--white);
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    margin: 50px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-items: center;
+    flex: 1;
+    margin-right: 1rem;
+
+}
+
+.icon {
+    width: 3.5rem;
+    margin: 0.7rem;
+}
+
+.logo-heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    align-items: center;
+}
+
+.leaf-image {
+    width: 5.5rem;
+}
+
+.header-headning {
+    color: var(--white);
+    font-family: 'Merriweather', serif;
+    font-size: 3.2rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.header-subheadning {
+    color: var(--black);
+    font-family: 'Roboto', serif;
+    font-size: 2rem;
+    margin-left: 25rem;
+    font-weight: 400;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.header-person {
+    width: 31rem;
+}
+
+.btn-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+}
+
+/* .btn-header {
+    width: 20rem;
+    padding: 20px;
+    background-color: var(--turquoise);
+    border: none;
+    border-radius: 40px;
+}
+
+.btn-header-link {
+    font-size: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-header-link-span {
+    color: var(--black);
+    text-shadow: none;
+    font-size: 1.1rem;
+}
+ */
+
+/* ARTICLE */
+
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.decor-img{
+    width: 12rem;
+}
+
+.decor-img-bigger{
+    width: 20rem;
+}
+
+.article-heading {
+    font-family: 'Nunito';    
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 6rem;
+    color: var(--green);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.article-subheading {
+    font-family: 'Nunito';    
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: var(--red);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.article-subheading-comment {
+    margin-left: 30rem;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    text-align: right;
+    color: var(--red);
+}
+
+.container-horizontal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25vh;
+}
+
+.list-item {
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 1.3rem;
+    line-height: 3.3rem; 
+}
+
+.bullet {
+    width: 2.3rem;
+    margin-right: 1.5rem;
+    vertical-align: middle; 
+}
+
+#EnglishOnYourTermsVideo {
+    width: 45rem;
+    margin-left: 4rem;
+
+} 
+
+.section-heading {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: var(--red);
+    margin-bottom: 3rem;
+}
+
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+}
+
+.liane {
+    width: 12rem;
+}
+
+.btn {
+   height: 120px;
+   margin-bottom: 5rem;
+   cursor: pointer;
+}
+
+.btn:hover  {
+   opacity: 0.4;
+   transition:  0.4s ease;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
+.slider-full-mobile {
+  position: relative;
+  margin: 50px auto;
+  padding-bottom: 50px;
+}
+
+.slider-full-mobile:before {
+  content: "";
+  width: 210px;
+   background-image: url(reviews/black-phone.png); 
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  height: 470px; 
+  z-index: 2;
+  margin: auto;
+  
+}
+.slider-full-mobile .slider-slide {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  
+}
+
+.slider-full-mobile .slider-slide img{
+    width: 210px;
+    height: 435px;
+    border-radius: 40px;
+  }
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-top: 2rem;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+} 
+
+
+.prices-bg {
+    background-image: url(resources/prices-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bullet-tick {
+    width: 1.3rem;
+    margin-right: 1rem;
+    vertical-align: middle; 
+}
+
+.price-item { 
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 1.3em;
+    line-height: 2rem; 
+    text-align: left;
+}
+.line-through {
+    text-decoration: line-through;
+}
+
+.price-p {
+    font-weight: 800;
+    font-size: 1.3em;
+    line-height: 3rem; 
+    text-align: right;
+    margin-left: 5rem;
+}
+
+/* submit button */
+
+
+.submit-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem;
+   
+  }
+  
+  .submit {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: var(--black);
+    background: var(--turquoise);
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  b.submit:before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .submit:hover, .submit:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .submit:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  .submit::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+    z-index: 3;
+  }
+  
+  .submit:hover::after, .submit:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
