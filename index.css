@@ -239,14 +239,14 @@ nav {
 }
 
 .btn {
-   height: 120px;
-   margin-bottom: 5rem;
-   cursor: pointer;
+    height: 120px;
+    margin-bottom: 5rem;
+    cursor: pointer;
 }
 
 .btn:hover  {
-   opacity: 0.4;
-   transition:  0.4s ease;
+    opacity: 0.4;
+    transition:  0.4s ease;
 }
 
 .slider-container {
@@ -254,35 +254,34 @@ nav {
     height: 100%;
     padding: 0;
     margin: 0;
-  }
+}
 
 
 .slider-full-mobile {
-  position: relative;
-  margin: 50px auto;
-  padding-bottom: 50px;
+    position: relative;
+    margin: 50px auto;
+    padding-bottom: 50px;
 }
 
+
 .slider-full-mobile:before {
-  content: "";
-  width: 210px;
-   background-image: url(reviews/black-phone.png); 
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0px;
-  height: 470px; 
-  z-index: 2;
-  margin: auto;
-  
+    content: "";
+    width: 210px;
+    background-image: url(reviews/black-phone.png); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    height: 470px; 
+    z-index: 2;
+    margin: auto;
 }
 .slider-full-mobile .slider-slide {
     height: 100%;
     object-fit: cover;
     display: none;
-  
 }
 
 .slider-full-mobile .slider-slide img{
@@ -291,7 +290,7 @@ nav {
     border-radius: 40px;
   }
 
-/* The dots/bullets/indicators */
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -366,10 +365,9 @@ nav {
     align-items: center;
     justify-content: center;
     margin: 7rem;
-   
-  }
-  
-  .submit {
+    }
+
+.submit {
     min-width: 300px;
     min-height: 60px;
     font-family: 'Merriweather', serif;
@@ -388,10 +386,10 @@ nav {
     outline: none;
     position: relative;
     padding: 10px;
-    }
-  
-  b.submit:before {
-  content: '';
+}
+
+.submit:before {
+    content: '';
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
@@ -403,18 +401,18 @@ nav {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all .3s ease-in-out 0s;
-  }
-  
-  .submit:hover, .submit:focus {
+}
+
+.submit:hover, .submit:focus {
     color: #313133;
     transform: translateY(-6px);
-  }
-  
-  .submit:hover::before, button:focus::before {
+}
+
+.submit:hover::before, button:focus::before {
     opacity: 1;
-  }
-  
-  .submit::after {
+}
+
+.submit::after {
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
@@ -426,23 +424,22 @@ nav {
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
     z-index: 3;
-  }
-  
-  .submit:hover::after, .submit:focus::after {
+}
+
+.submit:hover::after, .submit:focus::after {
     animation: none;
     display: none;
-  }
-  
-  @keyframes ring {
+}
+
+@keyframes ring {
     0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
-    
+    width: 30px;
+    height: 30px;
+    opacity: 1;
     }
     100% {
-      width: 300px;
-      height: 300px;
-      opacity: 0;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
     }
-  }
+}
