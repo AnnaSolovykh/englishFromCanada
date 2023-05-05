@@ -1,6 +1,8 @@
 let slides = document.querySelectorAll(".slider-slide");
 let dots = document.querySelectorAll(".dot");
 
+
+
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -13,6 +15,18 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
+
+
+function plusSlidesTwo(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlideTwo(n) {
+  showSlides(slideIndex = n);
+}
+
+
 
 function showSlides(n) {
   let i;
@@ -32,7 +46,7 @@ function showSlides(n) {
 
 let interval = setInterval( carousel,3000);
 
-function carousel (){
+function carousel(){
   slideIndex+=1; 
   showSlides(slideIndex);
 }

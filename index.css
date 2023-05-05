@@ -108,29 +108,6 @@ nav {
     width: 30%;
 }
 
-/* .btn-header {
-    width: 20rem;
-    padding: 20px;
-    background-color: var(--turquoise);
-    border: none;
-    border-radius: 40px;
-}
-
-.btn-header-link {
-    font-size: 1.5rem;
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Merriweather', serif;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.btn-header-link-span {
-    color: var(--black);
-    text-shadow: none;
-    font-size: 1.1rem;
-}
- */
-
 /* ARTICLE */
 
 .container-vertical {
@@ -180,12 +157,13 @@ nav {
 
 .container-horizontal {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 4rem;
 }
 
-.list-container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -197,6 +175,7 @@ nav {
     font-weight: 200;
     font-size: 1.3rem;
     line-height: 3.3rem; 
+    color: var(--black);
 }
 
 .bullet {
@@ -288,7 +267,7 @@ nav {
     width: 210px;
     height: 435px;
     border-radius: 40px;
-  }
+}
 
 
 .dot {
@@ -343,6 +322,7 @@ nav {
     font-size: 1.3em;
     line-height: 2rem; 
     text-align: left;
+    color: var(--black);
 }
 .line-through {
     text-decoration: line-through;
@@ -354,6 +334,7 @@ nav {
     line-height: 3rem; 
     text-align: right;
     margin-left: 5rem;
+    color: var(--black);
 }
 
 /* submit button */
@@ -393,7 +374,7 @@ nav {
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    border: 6px solid #00FFCB;
+    border: 6px solid rgba(0, 255, 204, 0.316);
     box-shadow: 0 0 60px rgba(0,255,203,.64);
     position: absolute;
     top: 50%;
@@ -431,6 +412,7 @@ nav {
     display: none;
 }
 
+
 @keyframes ring {
     0% {
     width: 30px;
@@ -443,3 +425,137 @@ nav {
     opacity: 0;
     }
 }
+
+.para {
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2.8rem; 
+    text-align: center;
+    margin-left: 5rem;
+    width: 30rem;
+    color: var(--black);
+}
+
+.highligted {
+    font-weight: bolder;
+    color: var(--red);
+}
+
+.section-subheading {
+    font-family: 'Nunito';
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--red);
+    width: 35rem;
+    text-align: center;
+}
+
+.infographic-containter {
+    display: flex;
+    height: 300px;
+}
+
+.infographic-picture {
+    width: 10rem;
+}
+
+.infographic-text {
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 0.9rem;
+    line-height: 1.5rem; 
+    color: var(--black);
+    width: 9rem;
+    text-align: center;
+    
+
+}
+
+.line {
+    height:10rem;
+    align-self: center;
+}
+
+.carousel {
+    padding: .3em .3em 0;
+    width: 30rem;
+    background: rgb(240,240,240);
+    text-align: center;
+    }
+
+.carousel div {
+    position: relative;
+    margin-bottom: .3em;
+    padding-top: 56.25%;
+    }
+    
+.carousel iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.carousel span {
+    display: inline-block;
+    word-spacing: 1em;  /* расстояние между картинками */
+
+  /* прокрутка миниатюр при необходимости */
+    overflow: auto;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.carousel a {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;  /* максимальная ширина миниатюр */
+    width: 50%;  /* ширина миниатюр */
+    border: 1px solid blue;  /* рамка вокруг миниатюр */
+    opacity: .7;  
+    text-decoration: none;
+}
+
+.carousel a:visited,
+.carousel a:nth-of-type(1) {
+    border-color: #555;  /* рамка вокруг миниатюр просмотренных видео */
+}
+
+.carousel a:hover { 
+    opacity: 1;
+}
+
+.carousel a:not(:active):focus {
+    pointer-events: none;
+}
+
+.carousel a::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+    background: rgba(0,0,1,.1);
+    transition: background 0s 9999999s;
+}
+
+.carousel a:nth-of-type(1)::before {
+    background: rgba(255,255,254,.7);
+}
+
+.carousel span:active a::before {
+    background: rgba(0,0,0,0);
+    transition: background 0s;
+}
+
+.carousel span:active a:active::before {
+    background: rgba(255,255,255,.7);
+    transition: background 0s;
+}
+
+.carousel img {
+    max-width: 100%;
+    vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
+}
+
