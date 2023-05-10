@@ -263,6 +263,7 @@ nav {
     display: none;
 }
 
+
 .slider-full-mobile .slider-slide img{
     width: 210px;
     height: 435px;
@@ -270,7 +271,7 @@ nav {
 }
 
 
-.dot {
+.dot, .Dots1, .Dots2 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -282,7 +283,7 @@ nav {
     margin-top: 2rem;
 }
 
-.active, .dot:hover {
+.active, .dot:hover, .Dots1:hover, .Dots2:hover {
     background-color: #717171;
 }
 
