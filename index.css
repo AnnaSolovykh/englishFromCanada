@@ -501,6 +501,10 @@ nav {
     position: relative;
     margin-bottom: .3em;
     padding-top: 56.25%;
+
+
+    height: 0;
+    overflow: hidden;
 }
     
 .carousel iframe {
