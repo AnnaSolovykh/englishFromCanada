@@ -483,8 +483,6 @@ nav {
     color: var(--black);
     width: 9rem;
     text-align: center;
-    
-
 }
 
 .line {
@@ -494,16 +492,16 @@ nav {
 
 .carousel {
     padding: .3em .3em 0;
-    width: 30rem;
+    width: 500px;
     background: rgb(240,240,240);
     text-align: center;
-    }
+}
 
 .carousel div {
     position: relative;
     margin-bottom: .3em;
     padding-top: 56.25%;
-    }
+}
     
 .carousel iframe {
     position: absolute;
