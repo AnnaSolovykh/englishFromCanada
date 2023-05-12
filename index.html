@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English From Canada</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -20,8 +21,8 @@
                 <h3 class="nav-heading">взрослым</h3>
             </div>
             <div class="icons-container">
-                <a href="https://maria_english_incanada.t.me/"><img class="icon" src="/resources/telegram.png" /></a>
-                <a href="https://instagram.com/maria_english_incanada?igshid=YmMyMTA2M2Y="><img class="icon" src="/resources/instagram.png"/></a>
+                <a href="https://maria_english_incanada.t.me/" target="_blank"><img class="icon" src="/resources/telegram.png" /></a>
+                <a href="https://instagram.com/maria_english_incanada?igshid=YmMyMTA2M2Y=" target="_blank"><img class="icon" src="/resources/instagram.png"/></a>
                 <img class="icon" src="/resources/whatsapp.png"/>
             </div>
         </nav>
@@ -38,7 +39,7 @@
             <div class="btn-header-container">
                 
                 <div class="content" data-form-type="card">
-                    <a href="javascript:;" class="btn">
+                    <a href="#englishOnTerms" class="btn">
                         <span class="btn__circle"></span>
                         <span class="btn__white-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 21 12">
@@ -48,7 +49,7 @@
                         <span class="btn__text">Курс для взрослых</span>
                     </a>
 
-                    <a href="javascript:;" class="btn">
+                    <a href="#adults" class="btn">
                         <span class="btn__circle"></span>
                         <span class="btn__white-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 21 12">
@@ -58,7 +59,7 @@
                         <span class="btn__text">Разговорный клуб</span>
                     </a>
 
-                    <a href="javascript:;" class="btn">
+                    <a href="#kids" class="btn">
                         <span class="btn__circle"></span>
                         <span class="btn__white-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 21 12">
@@ -75,7 +76,7 @@
     </header>
 
     <main>
-        <article class="container-vertical">
+        <article class="container-vertical" id="englishOnTerms">
             <img class="decor-img" src="/resources/remote-studying-boy.png" alt="Boy studying remotely with tutor"/>
             <h2 class="article-heading">Английский взрослым</h2>
             <h3 class="article-subheading">
@@ -85,7 +86,8 @@
             <h4 class="article-subheading-comment">для уровней A2-C1</h4>
 
             <div class="submit-container">
-                <button class="submit">записаться</button>
+                <a href="https://forms.gle/d6b6ZyaVHrAfREMy6" target="_blank"><button class="submit">записаться</button></a>
+                
             </div>
 
             <section class="container-horizontal">
@@ -98,7 +100,7 @@
                     <li class="list-item"><span><img class="bullet" src="/resources/leaf.png" alt="a bullet leaf"></span>Видео с носителями языка</li>
                 </ul>
 
-                <video controls class="video" id="EnglishOnYourTermsVideo" preload="metadata" poster="resources/englishOnTerms.JPG">
+                <video controls class="video" id="EnglishOnYourTermsVideo" preload="metadata" poster="videos/englishOnTermsCover.JPG">
                     <source src="/videos/EnglishYourTerms.mp4" type="video/mp4"></source>
                 </video>
             </section>
@@ -108,23 +110,23 @@
                 <h3 class="section-heading">Кому подойдет курс:</h3>
                 <ul class="list-container">
                     <li class="list-item">
-                        <span><img class="bullet" src="/resources/red check mark in the circle.png"/></span>
+                        <span><img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/></span>
                         тем, кто не хочет быть привязанным к стандартному расписанию и хочет максимум результата
                     </li>
                     <li class="list-item">
-                        <span><img class="bullet" src="/resources/red check mark in the circle.png"/></span>
+                        <span><img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/></span>
                         тем, у кого мало свободного времени
                     </li>
                     <li class="list-item">
-                        <span><img class="bullet" src="/resources/red check mark in the circle.png"/></span>
+                        <span><img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/></span>
                         тем, у кого нестандартный график работы
                     </li>
                     <li class="list-item">
-                        <span><img class="bullet" src="/resources/red check mark in the circle.png"/></span>
+                        <span><img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/></span>
                         тем, кто хочет только всего самого нового и современного
                     </li>
                     <li class="list-item">
-                        <span><img class="bullet" src="/resources/red check mark in the circle.png"/></span>
+                        <span><img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/></span>
                         тем, кто часто в телефоне
                     </li>
                 </ul>
@@ -137,7 +139,7 @@
             <div class="reviews-container">
                 <img class="liane" src="resources/liane.png"/>
         
-                    <div class="phone-container">
+                    <div class="phone-container phone-container-one">
                         <img class="btn" id="back" src="reviews/Double Left.png" onclick="plusSlides(-1, 0)"/> 
                         <div class="slider-container slider-full-mobile slider-container-initialized slider-container-horizontal">
                                 
@@ -156,11 +158,11 @@
                                     
                             </div>
                     
-                            <!-- <div style="text-align:center">
+                            <div style="text-align:center">
                                 <span class="dot Dots1" onclick="currentSlide(1,0)"></span> 
                                 <span class="dot Dots1" onclick="currentSlide(2,0)"></span> 
                                 <span class="dot Dots1" onclick="currentSlide(3,0)"></span> 
-                            </div>  -->
+                            </div> 
                         </div>
                         <img class="btn" id="next" src="reviews/Double Right.png" onclick="plusSlides(1, 0)"/>
                     </div>
@@ -228,13 +230,35 @@
 
         </article>
 
+        <article class="container-vertical" id="adults">
+            <img class="decor-img" src="/resources/display-with-play-btn.png" alt="Online education on the laptop"/>
+            <h2 class="article-heading">Разговорный клуб с носителем</h2> 
+            <h3 class="article-subheading-comment">
+                Актуальные темы (психология, технологии, cемья, <br/> жизнь в других странах, образование и т.д)</h3>
 
-        <article class="container-vertical">
+            <div class="submit-container">
+                <a href="https://maria_english_incanada.t.me/" target="_blank"><button class="submit">записаться</button></a>
+            </div>
+
+            <section class="container-horizontal">
+
+                <ul class="list-container">
+                    <li class="list-item"><span><img class="bullet" src="/resources/leaf.png" alt="a bullet leaf"></span>Материалы собраны на удобной платформе, к которой у вас останется доступ на 6 месяцев для повторения</li>
+                    <li class="list-item"><span><img class="bullet" src="/resources/leaf.png" alt="a bullet leaf"></span>Интерактивные задания для отработки лексики</li>
+                    <li class="list-item"><span><img class="bullet" src="/resources/leaf.png" alt="a bullet leaf"></span>Общение в парах и тройках</li>
+                </ul>
+
+
+
+        </article>
+
+
+        <article class="container-vertical" id="kids">
             <img class="decor-img" src="/resources/display-with-play-btn.png" alt="Online education on the laptop"/>
             <h2 class="article-heading">Английский детям</h2> 
             
             <div class="submit-container">
-                <button class="submit">записаться</button>
+                <a href="https://forms.gle/MTfpWNeZvKtizb4a8" target="_blank"><button class="submit">записаться</button></a>
             </div>
 
             <ul class="list-container">
@@ -321,10 +345,10 @@
                     </li>
                 </ul>
 
-                 <div class="reviews-container">
+                <div class="reviews-container">
                     <img class="liane" src="resources/liane.png"/>
             
-                        <div class="phone-container">
+                        <div class="phone-container phone-container-two">
                             <img class="btn" id="back" src="reviews/Double Left.png" onclick="plusSlides(-1,1)"/> 
                             <div class="slider-container slider-full-mobile slider-container-initialized slider-container-horizontal">
                                     
@@ -342,11 +366,11 @@
                                     </div>
                                         
                                 </div>
-                                <!-- <div style="text-align:center">
-                                    <span class="dot Dots2" onclick="currentSlide(1,0)"></span> 
-                                    <span class="dot Dots2" onclick="currentSlide(2,0)"></span> 
-                                    <span class="dot Dots2" onclick="currentSlide(3,0)"></span> 
-                                </div>  -->
+                                <div style="text-align:center">
+                                    <span class="dot Dots2" onclick="currentSlide(1,1)"></span> 
+                                    <span class="dot Dots2" onclick="currentSlide(2,1)"></span> 
+                                    <span class="dot Dots2" onclick="currentSlide(3,1)"></span> 
+                                </div> 
                             </div>
                             <img class="btn" id="next" src="reviews/Double Right.png" onclick="plusSlides(1,1)"/>
                         </div>
@@ -356,6 +380,43 @@
 
 
             </section>
+
+            <section class="container-vertical">
+                <img class="decor-img" src="/resources/payment.png" alt="Payment processed for goods using a debit card and phone" />
+                <h3 class="section-heading">Цены</h3>
+                <div class="container-vertical">
+                    <div class="prices-bg">
+                        <ul>
+                            <li>
+                                <span>
+                                    <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
+                                </span>
+                                <span class="price-item">Абонемент на 3 месяца:</span>
+                                <p  class="price-item-details">уроки 2 раза в <br> неделю по 40 мин </p>
+                                <p class="price-p">  <span class="line-through">12 600</span> 
+                                    11 700 рублей</p>
+                            </li>
+
+                            <li>
+                                <span>
+                                    <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
+                                </span>
+                                <span class="price-item">Абонемент на месяц:</span>
+                                <p  class="price-item-details">уроки 2 раза в <br> неделю по 40 мин </p>
+                                <p class="price-p">4 720 рублей</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container-horizontal">
+                    <img class="decor-img"  src="/resources/question-mark.png" alt="Woman standing with a question mark"/>
+                    <p class="section-subheading">Жду Вас на бесплатном пробном занятия для знакомства и определения уровня!</p>
+                </div>
+            </section>
+
+        </article>
         </article>
 
             
