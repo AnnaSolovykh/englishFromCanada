@@ -52,3 +52,20 @@ document.querySelector(".phone-container-two").addEventListener("click", () => {
   clearTimeout(intervalTwo);
   intervalTwo = setInterval(carousel, 10000, 1, 1);
 })
+
+
+const poster = document.querySelector(".iframe-container");
+const videos = document.querySelectorAll(".videos");
+const iFrame = document.querySelector("#myIframe");
+poster.addEventListener("click", removePoster);
+
+videos.forEach( (item) => {
+  item.addEventListener("click", () => {
+    poster.classList.add("iframe-container-active");
+  })
+})
+
+function removePoster() {
+  poster.classList.add("iframe-container-active");
+  iFrame.src += "?autoplay=1";
+}

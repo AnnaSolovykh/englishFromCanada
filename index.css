@@ -157,7 +157,6 @@ nav {
 
 .container-horizontal {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 4rem;
@@ -492,33 +491,55 @@ nav {
 
 .carousel {
     padding: .3em .3em 0;
-    width: 30vw;
+    width: 50%;
     background: rgb(240,240,240);
     text-align: center;
 }
 
-.carousel div {
-    position: relative;
-    margin-bottom: .3em;
-    padding-top: 56.25%;
-}
-    
-.carousel iframe {
+iframe  {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30vw;
-    height: 30vh;
+    right: 0; 
+    height: 100%;
+    width: 100%; 
+} 
+
+.iframe-container {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: .3em;
+    padding-top: 56.25%; 
+    width: 100%; 
 }
+
+.iframe-container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(videos/witch.JPG);
+    background-size: cover;
+    transition: 1s ease;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.iframe-container-active:after {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .carousel span {
     display: inline-block;
-    word-spacing: 1em;  /* расстояние между картинками */
-
-  /* прокрутка миниатюр при необходимости */
+    word-spacing: 1em;  
     overflow: auto;
     white-space: nowrap;
     word-wrap: normal;
 }
+
 .carousel a {
     position: relative;
     display: inline-block;

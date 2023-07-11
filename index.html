@@ -17,8 +17,8 @@
 
         <nav>
             <div class="nav-headings-container">
-                <h3 class="nav-heading">детям</h3>
-                <h3 class="nav-heading">взрослым</h3>
+                <a href="#kids" class="nav-heading">детям</a>
+                <a href="#adults" class="nav-heading">взрослым</a>
             </div>
             <div class="icons-container">
                 <a href="https://maria_english_incanada.t.me/" target="_blank"><img class="icon" src="/resources/telegram.png" /></a>
@@ -317,13 +317,29 @@
                 <img src="resources/red-dotted-line.png"/>
                     
                 <div class="carousel">
-                    <div><iframe src="/videos/witch.mp4" allowfullscreen frameborder="0" name="videosSlider" ><img src="videos/witch.JPG"></iframe></div>
-                        <span>
-                            <a href="videos/magic wand.mp4"  target="videosSlider"><img src="videos/magic.JPG"></a>
-                            <a href="videos/creature.mp4" target="videosSlider"><img src="videos/kids.JPG"></a>
-                            <a href="/videos/witch.mp4" target="videosSlider"><img src="videos/witch.JPG"></a>
-                        </span>
-                    </div>
+                    <div class="iframe-container">
+                        <iframe
+                            allow='autoplay'     
+                            id="myIframe" 
+                            poster="videos/witch.JPG" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen 
+                            src="https://www.youtube.com/embed/lw42tzyKd48"
+                            name="videosSlider" >
+                        </iframe>
+                    </div> 
+                    <span>
+                        <a class="videos" href="videos/magic wand.mp4"  target="videosSlider">
+                            <img src="videos/magic.JPG">
+                        </a>
+                        <a class="videos" href="videos/creature.mp4" target="videosSlider">
+                            <img src="videos/kids.JPG">
+                        </a>
+                        <a class="videos" href="/videos/witch.mp4" target="videosSlider">
+                            <img src="videos/witch.JPG">
+                        </a>
+                    </span>
                 </div>
             </section>
 
