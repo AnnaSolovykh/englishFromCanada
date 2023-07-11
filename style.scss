@@ -92,6 +92,10 @@ a {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  
 }
 
+@media all and (max-width: 900px)  {
+  .btn__text {
+    font-size: 1.2rem;
+  }
+}

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,6 +16,8 @@ body {
     --green: #025359;
 }
 
+/* HEADER */
+
 header {
     background-image: url(/resources/header-bg.png);
     background-position: center;
@@ -27,6 +30,7 @@ header {
 nav {
     display: flex;
     margin-left: 20rem;
+    justify-content: center;
     height: 11vh;
 }
 
@@ -48,13 +52,12 @@ nav {
 }
 
 .icons-container {
+    margin-left: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    align-items: center;
     flex: 1;
     margin-right: 1rem;
-
 }
 
 .icon {
@@ -108,6 +111,88 @@ nav {
     width: 30%;
 }
 
+@media all and (max-width:850px)  {
+    nav {
+        margin-left: 12rem;
+        height: 10vh;
+    }
+
+    .header-headning {
+        font-size: 2rem;
+    }
+    
+    .header-subheadning {
+        font-size: 1.5rem;
+        margin-left: 25rem;
+    }
+    header {
+        height: 75vh;
+        /* display: none; */
+    }
+
+    .button-container {
+        margin-top: 6rem; 
+        width: 80%;
+        /* display: none; */
+    }
+    
+    .header-person {
+        width: 20rem;
+        height: 100%;
+        position:sticky;
+    } 
+
+    .btn-header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .icons-container {
+        flex: 1;
+        margin-right: 1rem;
+    
+    }
+
+    .icon {
+        width: 2.7rem;
+        margin: 0.3rem;
+    }
+
+    .nav-headings-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 5;
+    }
+    
+
+    .nav-heading {
+        font-size: 1.3rem;
+        margin: 50px;
+    }
+}
+
+@media all and (max-width: 800px)  {
+    header {
+        height: 83vh;
+    }
+}
+
+@media all and (max-width: 400px) {
+    
+}
+@media all and (max-width: 400px) {
+    header {
+        height: 83vh;
+    }
+    .header-person {
+        width: 10rem;
+        height: 100%;
+    } 
+
+}
 /* ARTICLE */
 
 .container-vertical {
@@ -169,6 +254,11 @@ nav {
     height: 25vh;
 }
 
+.list-container div {
+    display: flex;
+    align-items: center;
+}
+
 .list-item {
     font-family: 'Roboto';
     font-weight: 200;
@@ -189,6 +279,44 @@ nav {
 
 } 
 
+@media all and (max-width: 900px)  {
+    .container-horizontal {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .article-heading {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+
+    .article-subheading {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+    
+    .article-subheading-comment {
+        margin-left: 3.5rem;
+        width: 500px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    
+
+    #EnglishOnYourTermsVideo {
+        width: 30rem;
+        margin-top: 2rem;
+        margin-left: 0; 
+    } 
+
+    .list-item {
+        font-size: 1.1rem;
+        line-height: 2rem; 
+        width: 80%;
+    }
+}
+/* REVIEWS */
 .section-heading {
     font-family: 'Nunito';
     font-style: normal;
@@ -265,8 +393,6 @@ nav {
     display: none;
 }
 
-
-
 .slider-full-mobile .slider-slide img{
     width: 210px;
     height: 435px;
@@ -300,6 +426,22 @@ nav {
     to {opacity: 1}
 } 
 
+@media all and (max-width: 900px)  {
+    .reviews-container {
+        height: 40vh;
+        /* width: 80%; */
+    }
+    .liane {
+        width: 5rem;
+        flex-shrink: 1;
+    }
+
+    .slider-full-mobile {
+        margin: 50px auto;
+        padding-bottom: 20px;
+        flex-shrink: 3;
+    }
+}
 
 .prices-bg {
     background-image: url(resources/prices-bg.png);
@@ -465,9 +607,11 @@ nav {
     text-align: center;
 }
 
+/* INFOGRAPHICS */
 .infographic-containter {
     display: flex;
     height: 300px;
+    flex-wrap: wrap;
 }
 
 .infographic-picture {
@@ -487,6 +631,26 @@ nav {
 .line {
     height:10rem;
     align-self: center;
+}
+
+
+@media all and (max-width: 900px)  {
+    .infographic-containter {
+        height: 50vh;
+        flex-wrap: wrap;
+        /* display: none;  */
+    }
+    
+    .infographic-picture {
+        width: 5rem;
+    }
+    
+    .infographic-text {
+        font-size: 0.9rem;
+        line-height: 1.5rem; 
+        width: 5rem;
+    }
+    
 }
 
 .carousel {
