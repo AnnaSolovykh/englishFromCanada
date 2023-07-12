@@ -25,6 +25,9 @@ header {
     background-repeat: no-repeat;
     max-height: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav {
@@ -36,7 +39,7 @@ nav {
 
 .nav-headings-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex: 8;
 }
@@ -45,7 +48,7 @@ nav {
     color: var(--white);
     font-size: 2rem;
     font-family: 'Merriweather', serif;
-    margin: 50px;
+    /* margin: 50px; */
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     letter-spacing: 0.1rem;
     font-weight: 700;
@@ -97,7 +100,6 @@ nav {
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
 }
 
 .header-person {
@@ -111,7 +113,7 @@ nav {
     width: 30%;
 }
 
-@media all and (max-width:850px)  {
+@media all and (max-width:1120px)  {
     nav {
         margin-left: 12rem;
         height: 10vh;
@@ -126,20 +128,16 @@ nav {
         margin-left: 25rem;
     }
     header {
-        height: 75vh;
-        /* display: none; */
+        height: 85vh;
     }
 
     .button-container {
-        margin-top: 6rem; 
         width: 80%;
-        /* display: none; */
     }
     
     .header-person {
         width: 20rem;
         height: 100%;
-        position:sticky;
     } 
 
     .btn-header-container {
@@ -170,27 +168,34 @@ nav {
 
     .nav-heading {
         font-size: 1.3rem;
-        margin: 50px;
+        margin: 2rem;
     }
 }
 
-@media all and (max-width: 800px)  {
+@media all and (max-width: 750px)  {
     header {
         height: 83vh;
     }
+
+    nav {
+        margin-left: 12rem;
+        height: 7vh;
+    }
+
+
 }
 
-@media all and (max-width: 400px) {
-    
-}
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
     header {
         height: 83vh;
     }
     .header-person {
-        width: 10rem;
-        height: 100%;
+
     } 
+
+    .nav-heading {
+        margin: 1.5rem;
+    }
 
 }
 /* ARTICLE */
@@ -245,6 +250,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     margin-top: 4rem;
+    width: 90%;
 }
 
 .container {
@@ -252,6 +258,10 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     height: 25vh;
+}
+
+.list-container  {
+    margin: 0 4rem;
 }
 
 .list-container div {
@@ -279,11 +289,15 @@ nav {
 
 } 
 
-@media all and (max-width: 900px)  {
+@media all and (max-width: 1200px)  {
     .container-horizontal {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .list-container  {
+        margin: 0 6rem;
     }
 
     .article-heading {
@@ -305,7 +319,7 @@ nav {
     
 
     #EnglishOnYourTermsVideo {
-        width: 30rem;
+        width: 40rem;
         margin-top: 2rem;
         margin-left: 0; 
     } 
@@ -315,6 +329,26 @@ nav {
         line-height: 2rem; 
         width: 80%;
     }
+}
+
+@media all and (max-width: 800px)  {
+    #EnglishOnYourTermsVideo {
+        width: 80%;
+    } 
+    .list-item {
+        line-height: 2rem; 
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .list-item {
+        /* font-size: 1.1rem; */
+        line-height: 2rem; 
+    }
+    #EnglishOnYourTermsVideo {
+        /* width: 25rem; */
+    } 
 }
 /* REVIEWS */
 .section-heading {
@@ -344,13 +378,13 @@ nav {
     width: 12rem;
 }
 
-.btn {
-    height: 120px;
-    margin-bottom: 5rem;
+.btn-arrow {
     cursor: pointer;
+    width: 3rem;
+    margin: 10px;
 }
 
-.btn:hover  {
+.btn-arrow:hover  {
     opacity: 0.4;
     transition:  0.4s ease;
 }
@@ -360,19 +394,20 @@ nav {
     height: 100%;
     padding: 0;
     margin: 0;
+    margin-top: 4rem; 
 }
 
 
 .slider-full-mobile {
     position: relative;
-    margin: 50px auto;
-    padding-bottom: 50px;
+    /* margin: 50px auto; */
+    /* padding-bottom: 50px; */
 }
 
 
 .slider-full-mobile:before {
     content: "";
-    width: 210px;
+    width: 270px;
     background-image: url(reviews/black-phone.png); 
     background-size: 100%;
     background-repeat: no-repeat;
@@ -380,7 +415,7 @@ nav {
     left: 0;
     right: 0;
     top: 0px;
-    height: 470px; 
+    height: 570px; 
     z-index: 2;
     margin: auto;
 }
@@ -394,8 +429,8 @@ nav {
 }
 
 .slider-full-mobile .slider-slide img{
-    width: 210px;
-    height: 435px;
+    width: 270px;
+    height: 485px;
     border-radius: 40px;
 }
 
@@ -409,7 +444,7 @@ nav {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    margin-top: 2rem;
+    margin-top: 7rem; 
 }
 
 .active, .dot:hover {
@@ -426,20 +461,42 @@ nav {
     to {opacity: 1}
 } 
 
-@media all and (max-width: 900px)  {
+@media all and (max-width: 1120px)  {
+    .slider-container {
+        margin-top: 2rem; 
+    }
     .reviews-container {
-        height: 40vh;
-        /* width: 80%; */
+        height: 60vh;
+        width: 80%; 
+    }
+
+    .btn-arrow {
+        width: 3rem;
+        margin: 0;
     }
     .liane {
         width: 5rem;
-        flex-shrink: 1;
+        
     }
 
-    .slider-full-mobile {
-        margin: 50px auto;
-        padding-bottom: 20px;
-        flex-shrink: 3;
+}
+
+@media all and (max-width: 700px) {
+    .reviews-container {
+        height: 40vh;
+    }
+    .slider-full-mobile:before {
+        width: 220px;
+        height: 520px; 
+    }
+    
+    
+    .slider-full-mobile .slider-slide img{
+        width: 220px;
+        height: 435px;
+    }
+    .dot {
+        margin-top: 3rem; 
     }
 }
 
@@ -610,8 +667,9 @@ nav {
 /* INFOGRAPHICS */
 .infographic-containter {
     display: flex;
-    height: 300px;
+    height:20rem;
     flex-wrap: wrap;
+    margin-bottom: 7rem;
 }
 
 .infographic-picture {
@@ -634,15 +692,15 @@ nav {
 }
 
 
-@media all and (max-width: 900px)  {
+@media all and (max-width: 1120px)  {
     .infographic-containter {
         height: 50vh;
-        flex-wrap: wrap;
-        /* display: none;  */
+        width: 90%;
+
     }
     
     .infographic-picture {
-        width: 5rem;
+        width: 7rem;
     }
     
     .infographic-text {
@@ -651,6 +709,18 @@ nav {
         width: 5rem;
     }
     
+}
+
+@media all and (max-width: 740px) {
+    .infographic-containter {
+        height: 60vh;
+    }
+}
+
+@media all and (max-width: 500px)  {
+    .infographic-containter {
+        height: 90vh;
+    }
 }
 
 .carousel {
@@ -757,3 +827,14 @@ iframe  {
     vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
 }
 
+@media all and (max-width: 900px) {
+    .dotted-line {
+        transform: rotate(270deg);
+        width: 15rem;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+    
+}
