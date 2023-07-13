@@ -437,6 +437,14 @@ nav {
         font-size: 1.1rem;
     }
 }
+
+@media all and (max-width: 400px) {
+    .section-heading, .article-heading  {
+        text-align: center;
+        width: 80%;
+    }
+
+}
 /* REVIEWS */
 
 .reviews-container {
@@ -477,8 +485,6 @@ nav {
 
 .slider-full-mobile {
     position: relative;
-    /* margin: 50px auto; */
-    /* padding-bottom: 50px; */
 }
 
 
@@ -990,7 +996,10 @@ nav {
     }
 }
 
-@media all and (max-width: 400px)  {    
+@media all and (max-width: 400px)  {   
+    .infographic-containter {
+        width: 80%;
+    } 
     .infographic-picture {
         width: 4.5rem;
     }
