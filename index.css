@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F6F5F3;
 }
@@ -33,8 +38,10 @@ header {
 nav {
     display: flex;
     margin-left: 20rem;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-around;
     height: 11vh;
+    align-items: center;
 }
 
 .nav-headings-container {
@@ -115,7 +122,7 @@ nav {
 
 @media all and (max-width:1120px)  {
     nav {
-        margin-left: 12rem;
+        margin-left: 14rem;
         height: 10vh;
     }
 
@@ -140,31 +147,10 @@ nav {
         height: 100%;
     } 
 
-    .btn-header-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-    }
-
-    .icons-container {
-        flex: 1;
-        margin-right: 1rem;
-    
-    }
-
     .icon {
         width: 2.7rem;
-        margin: 0.3rem;
+        margin: 0.5rem 0.3rem 0.3rem 0;
     }
-
-    .nav-headings-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 5;
-    }
-    
 
     .nav-heading {
         font-size: 1.3rem;
@@ -178,23 +164,56 @@ nav {
     }
 
     nav {
-        margin-left: 12rem;
+        margin-left: 11rem;
         height: 7vh;
     }
 
+    .nav-heading {
+        font-size: 1.2rem;
+    }
+
+    .header-headning {
+        font-size: 1.7rem;
+    }
+    
+    .header-subheadning {
+        font-size: 1.2rem;
+    }
+
+    .icon {
+        width: 2.1rem;
+    }
 
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
     header {
-        height: 83vh;
+        height: 100vh;
+    }
+
+    .button-container {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
     .header-person {
-
+        width: 15rem;
+        height: min-content;
+        align-self: flex-start;
     } 
 
     .nav-heading {
         margin: 1.5rem;
+        display: none;
+    }
+    .header-subheadning {
+        margin-left: 10rem;
+        font-size: 1.1rem;
+    }
+
+    .icons-container {
+        display: none;
     }
 
 }
@@ -259,9 +278,8 @@ nav {
     justify-content: space-around;
     height: 25vh;
 }
-
-.list-container  {
-    margin: 0 4rem;
+.list-container-wrapper {
+    width: 70%;
 }
 
 .list-container div {
@@ -289,15 +307,21 @@ nav {
 
 } 
 
+.section-heading {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: var(--red);
+    margin-bottom: 3rem;
+}
+
 @media all and (max-width: 1200px)  {
     .container-horizontal {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-    }
-
-    .list-container  {
-        margin: 0 6rem;
     }
 
     .article-heading {
@@ -335,6 +359,11 @@ nav {
     #EnglishOnYourTermsVideo {
         width: 80%;
     } 
+
+    .list-container-wrapper {
+        width: 80%;
+    }
+
     .list-item {
         line-height: 2rem; 
         width: 100%;
@@ -342,31 +371,57 @@ nav {
 }
 
 @media all and (max-width: 600px) {
+
     .list-item {
-        /* font-size: 1.1rem; */
+        font-size: 1.1rem; 
         line-height: 2rem; 
     }
     #EnglishOnYourTermsVideo {
-        /* width: 25rem; */
+        width: 90%;
     } 
-}
-/* REVIEWS */
-.section-heading {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 4rem;
-    color: var(--red);
-    margin-bottom: 3rem;
+
+     .article-heading {
+        font-size: 1.6rem;
+    }
+
+    .article-subheading {
+        font-size: 1.3rem;
+    }
+    
+    .article-subheading-comment {
+        margin-left: 1.5rem;
+        width: 300px;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .decor-img{
+        width: 8rem;
+    }
+    
+    .decor-img-bigger{
+        width: 14rem;
+    }
+    .section-heading {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
 }
 
+@media all and (max-width: 500px)  {
+    .list-container-wrapper {
+        width: 90%;
+    }
+}
+/* REVIEWS */
 
 .reviews-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100%;
 }
 
 .phone-container {
@@ -466,7 +521,6 @@ nav {
         margin-top: 2rem; 
     }
     .reviews-container {
-        height: 60vh;
         width: 80%; 
     }
 
@@ -482,14 +536,10 @@ nav {
 }
 
 @media all and (max-width: 700px) {
-    .reviews-container {
-        height: 40vh;
-    }
     .slider-full-mobile:before {
         width: 220px;
         height: 520px; 
     }
-    
     
     .slider-full-mobile .slider-slide img{
         width: 220px;
@@ -500,6 +550,43 @@ nav {
     }
 }
 
+@media all and (max-width: 500px)  {
+    /* .slider-full-mobile:before {
+        width: 220px;
+        height: 520px; 
+    }
+    
+    .slider-full-mobile .slider-slide img{
+        width: 220px;
+        height: 435px;
+    }
+    .dot {
+        margin-top: 3rem; 
+    } */
+    .reviews-container {
+        height: 100%;
+    }
+    .slider-full-mobile:before {
+        width: 170px;
+        height: 400px; 
+    }
+    
+    .slider-full-mobile .slider-slide img{
+        width: 170px;
+        height: 355px;
+    }
+    .btn-arrow {
+        width: 3rem;
+    }
+    .liane {
+        width: 4rem;
+    }
+}
+@media all and (max-width: 400px)  {
+    .liane {
+        display: none;
+    }
+}
 .prices-bg {
     background-image: url(resources/prices-bg.png);
     background-size: cover;
@@ -548,6 +635,37 @@ nav {
     text-align: right;
     margin-left: 5rem;
     color: var(--red);
+}
+
+@media all and (max-width: 500px)  {
+    .prices-bg {
+        background-size: contain;
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .bullet-tick {
+        width: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    .price-item { 
+        font-size: 1.1em;
+        line-height: 1.7em; 
+        padding: 1rem 0;
+    }
+
+    .price-item-details {
+        font-size: 0.9rem;
+        line-height: 1.3rem; 
+    }
+
+    .price-p {
+        font-size: 1.1em;
+        line-height: 1.6rem; 
+        margin: 0;
+    }
+
 }
 
 /* submit button */
@@ -647,6 +765,7 @@ nav {
     margin-left: 5rem;
     width: 30rem;
     color: var(--black);
+    margin-top: 2rem;
 }
 
 .highligted {
@@ -662,14 +781,55 @@ nav {
     color: var(--red);
     width: 35rem;
     text-align: center;
+    margin-top: 2rem;
+}
+@media all and (max-width: 700px) {
+    .para {
+        margin-left: 0;
+        width: 80%;
+        margin-top: 1rem;
+    }
+    .section-subheading {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}
+@media all and (max-width: 500px) {
+    .para {
+        font-size: 1.3em;
+        line-height: 2.5rem; 
+    }
+    .section-subheading {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+    }
+
+    .submit {
+        min-width: 250px;
+        min-height: 50px;
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .submit:before {
+        min-width: calc(250px + 12px);
+        min-height: calc(50px + 18px);
+    }
+
 }
 
 /* INFOGRAPHICS */
 .infographic-containter {
     display: flex;
-    height:20rem;
+    height:100%;
     flex-wrap: wrap;
     margin-bottom: 7rem;
+}
+
+.infographic-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .infographic-picture {
@@ -689,14 +849,13 @@ nav {
 .line {
     height:10rem;
     align-self: center;
+
 }
 
 
-@media all and (max-width: 1120px)  {
+@media all and (max-width: 1200px)  {
     .infographic-containter {
-        height: 50vh;
-        width: 90%;
-
+        width: 95%;
     }
     
     .infographic-picture {
@@ -706,22 +865,46 @@ nav {
     .infographic-text {
         font-size: 0.9rem;
         line-height: 1.5rem; 
-        width: 5rem;
+        width: 9rem;
     }
-    
 }
 
 @media all and (max-width: 740px) {
-    .infographic-containter {
-        height: 60vh;
+    .infographic-picture {
+        width: 6rem;
+    }
+    
+    .infographic-text {
+        font-size: 0.8rem;
+        line-height: 1.2rem; 
+    }
+
+    .line {
+        height:7rem;
+    }
+    
+}
+@media all and (max-width: 500px) {
+    .line {
+        height: 4rem;
     }
 }
 
-@media all and (max-width: 500px)  {
-    .infographic-containter {
-        height: 90vh;
+@media all and (max-width: 400px)  {    
+    .infographic-picture {
+        width: 4rem;
+    }
+    
+    .infographic-text {
+        font-size: 0.8rem;
+        line-height: 1.2rem; 
+    }
+
+    .line{
+        display: none;
     }
 }
+
 
 .carousel {
     padding: .3em .3em 0;
@@ -827,7 +1010,7 @@ iframe  {
     vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 11200px) {
     .dotted-line {
         transform: rotate(270deg);
         width: 15rem;

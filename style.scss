@@ -99,3 +99,37 @@ a {
     font-size: 1.2rem;
   }
 }
+
+@media all and (max-width: 750px) {
+  .btn__text {
+    font-size: 1rem;
+  }
+  .content {
+    width: 2.5vw
+  }
+}
+
+@media all and (max-width: 600px) {
+  .btn__text {
+    font-size: 1rem;
+  }
+  .content {
+    width: 1.5vw
+  }
+  .btn {
+    &__circle {
+      height: 80%;
+      width: 80%;
+      top: 5px;
+      left: 10px;
+    }
+    &__white-circle {
+      width: 52px;
+      height: 52px;  
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
