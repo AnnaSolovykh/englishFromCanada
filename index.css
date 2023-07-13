@@ -119,7 +119,11 @@ nav {
     justify-content: space-around;
     width: 30%;
 }
-
+@media (orientation: landscape) {
+    header {
+        height: 100vh;
+    }
+}
 @media all and (max-width:1120px)  {
     nav {
         margin-left: 14rem;
@@ -223,7 +227,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .decor-img{
@@ -268,7 +272,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 90%;
 }
 
@@ -280,6 +284,8 @@ nav {
 }
 .list-container-wrapper {
     width: 70%;
+    display: flex;
+    align-items: center;
 }
 
 .list-container div {
@@ -290,7 +296,7 @@ nav {
 .list-item {
     font-family: 'Roboto';
     font-weight: 200;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 3.3rem; 
     color: var(--black);
 }
@@ -315,6 +321,7 @@ nav {
     line-height: 4rem;
     color: var(--red);
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 @media all and (max-width: 1200px)  {
@@ -322,6 +329,7 @@ nav {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        width: 100%;
     }
 
     .article-heading {
@@ -382,6 +390,7 @@ nav {
 
      .article-heading {
         font-size: 1.6rem;
+        line-height: 2rem;
     }
 
     .article-subheading {
@@ -413,6 +422,19 @@ nav {
 @media all and (max-width: 500px)  {
     .list-container-wrapper {
         width: 90%;
+    }
+    .list-item {
+        font-size: 1rem; 
+    }
+    .article-heading {
+        font-size: 1.4rem;
+    }
+    .article-subheading {
+        font-size: 1.2rem;
+    }
+    
+    .article-subheading-comment {
+        font-size: 1.1rem;
     }
 }
 /* REVIEWS */
@@ -551,18 +573,6 @@ nav {
 }
 
 @media all and (max-width: 500px)  {
-    /* .slider-full-mobile:before {
-        width: 220px;
-        height: 520px; 
-    }
-    
-    .slider-full-mobile .slider-slide img{
-        width: 220px;
-        height: 435px;
-    }
-    .dot {
-        margin-top: 3rem; 
-    } */
     .reviews-container {
         height: 100%;
     }
@@ -583,33 +593,50 @@ nav {
     }
 }
 @media all and (max-width: 400px)  {
-    .liane {
-        display: none;
+    .btn-arrow {
+        width: 2.4rem;
     }
+    .liane {
+        width: 3rem;
+    }
+    .dot {
+        margin-top: 1rem;
+    }
+}
+
+.prices-container {
+    display: flex;
+
 }
 .prices-bg {
     background-image: url(resources/prices-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30rem;
-    height: 25rem;
+    width: 22rem;
+    height: 19rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 2rem;
 }
+
+.prices-bg div{
+    padding: 0 2.5rem;
+}
+
 
 .bullet-tick {
     width: 1.3rem;
-    margin-right: 1rem;
-    vertical-align: middle; 
+    margin-right: 0.1rem;
+    vertical-align: bottom; 
 }
 
 .price-item { 
     font-family: 'Roboto';
     font-weight: 200;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     line-height: 2rem; 
     text-align: left;
     color: var(--black);
@@ -633,11 +660,77 @@ nav {
     font-size: 1.3em;
     line-height: 3rem; 
     text-align: right;
-    margin-left: 5rem;
     color: var(--red);
 }
 
+.buy-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.buy-btn:hover {
+    transform: translateY(-6px);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.buy-btn {
+    margin-top: 1.7rem;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: var(--black);
+    background: var(--turquoise);
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+@media all and (max-width: 1250px)  {
+    .prices-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media all and (max-width: 800px)  {
+    .bullet-tick {
+        margin-right: 0.5rem;
+    }
+
+    .price-item { 
+        font-size: 1.1em;
+        line-height: 1.7em; 
+        padding: 1rem 0;
+    }
+
+    .price-item-details {
+        font-size: 0.9rem;
+        line-height: 1.3rem; 
+    }
+
+    .price-p {
+        font-size: 1.1em;
+        line-height: 1.6rem; 
+    }
+}
 @media all and (max-width: 500px)  {
+    .buy-btn {
+        min-width: 150px;
+        min-height: 30px;
+    }
+    
     .prices-bg {
         background-size: contain;
         width: 25rem;
@@ -783,6 +876,7 @@ nav {
     text-align: center;
     margin-top: 2rem;
 }
+
 @media all and (max-width: 700px) {
     .para {
         margin-left: 0;
@@ -796,11 +890,17 @@ nav {
 }
 @media all and (max-width: 500px) {
     .para {
-        font-size: 1.3em;
-        line-height: 2.5rem; 
+        font-size: 1.2rem;
+        line-height: 2rem; 
+        width: 70%;
+    }
+
+    .section-heading {
+        line-height: 2rem;
+        font-size: 1.4rem;
     }
     .section-subheading {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 2.7rem;
     }
 
@@ -823,7 +923,6 @@ nav {
     display: flex;
     height:100%;
     flex-wrap: wrap;
-    margin-bottom: 7rem;
 }
 
 .infographic-item {
@@ -855,7 +954,8 @@ nav {
 
 @media all and (max-width: 1200px)  {
     .infographic-containter {
-        width: 95%;
+        width: 90%;
+        justify-content: space-evenly;
     }
     
     .infographic-picture {
@@ -892,16 +992,18 @@ nav {
 
 @media all and (max-width: 400px)  {    
     .infographic-picture {
-        width: 4rem;
+        width: 4.5rem;
     }
     
     .infographic-text {
         font-size: 0.8rem;
         line-height: 1.2rem; 
+        width: 4rem;
     }
 
     .line{
-        display: none;
+        height: 50%;
+        width: 30%;
     }
 }
 
@@ -1010,7 +1112,7 @@ iframe  {
     vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
 }
 
-@media all and (max-width: 11200px) {
+@media all and (max-width: 1120px) {
     .dotted-line {
         transform: rotate(270deg);
         width: 15rem;
@@ -1019,5 +1121,10 @@ iframe  {
     .carousel {
         width: 90%;
     }
-    
+}
+
+@media all and (max-width: 420px) {
+    .dotted-line {
+        width: 10rem;
+    }
 }
