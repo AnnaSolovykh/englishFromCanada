@@ -1400,7 +1400,7 @@ iframe  {
         height: 35px;
     }
 }
-
+ 
 @media all and (max-width: 400px)  {
     .contactActions {
         right: 1rem;
@@ -1416,3 +1416,4 @@ iframe  {
     }
 
 }
+*/
