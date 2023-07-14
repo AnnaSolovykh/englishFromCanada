@@ -632,6 +632,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 2rem;
 }
 
 .prices-bg div{
@@ -715,6 +716,11 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+
+    .prices-bg {
+        margin: 0;
+    }
+    
 }
 @media all and (max-width: 800px)  {
     .bullet-tick {
