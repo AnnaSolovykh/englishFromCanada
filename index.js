@@ -97,14 +97,22 @@ function removePoster() {
 
 
 let toTopButton = document.getElementById("toTopButton");
+let contactsContainer = document.querySelector(".contactActions");
+//let constactsButtons = document.querySelectorAll(".contactButtons");
+//let contactsButtonTrigger = document.querySelector(".contactToggle");
 
-window.onscroll = function() {scrollFunction()};
+
+window.onscroll = function() {
+  scrollFunction()
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     toTopButton.style.display = "block";
+    contactsContainer.style.display = "block";
   } else {
     toTopButton.style.display = "none";
+    contactsContainer.style.display = "none";
   }
 }
 
@@ -112,3 +120,15 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+/*
+contactsButtonTrigger.addEventListener("click", ()=> {
+  constactsButtons.forEach((item)=> {
+    item.addEventListener("click", ()=> {
+      item.style.display = "none"
+    })
+    item.style.display = "block"
+  })
+})
+
+*/
+

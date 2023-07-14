@@ -1166,7 +1166,7 @@ iframe  {
 @media all and (max-width: 600px) {
     .mobile-nav {
         position: fixed;
-        right: 0px;
+        right: 0;
         height: 100vh;
         top: 0;
         display: flex;
@@ -1237,25 +1237,176 @@ iframe  {
     }
 }
 
+/*Contacts*/
+.contactActions {
+    position: fixed;
+    bottom: 5rem;
+    right: 0.5rem;
+}
+
+.contactButton { 
+    height: 60px;
+    width: 60px;
+    background-color: #3D8589;
+    background-image: url("/resources/phone.png");
+    background-size: cover;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.contactButton:hover {
+    background-color: #001819;
+    opacity: 1;
+}
+
+.contactButtons {
+    position: absolute;
+    width: 100%;
+    bottom: 120%;
+    text-align: center;
+}
+
+.contactButtons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 11px auto 0;
+    line-height: 1.15;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    box-shadow: 0 0 5px 1px rgba(51, 51, 51, .3);
+}
+
+.contactButtons a:hover {
+    transform: scale(1.1);
+}
+
+.contactButtons a:nth-child(1) {
+    background-image: url("/resources/telegram.png");
+    background-size: cover;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #3D8589;
+    transition: opacity .2s ease-in-out .3s, transform .15s ease-in-out;
+}
+
+.contactButtons a:nth-child(2) {
+    background-image: url("/resources/instagram.png");
+    background-size: cover;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #3D8589;
+    transition: opacity .2s ease-in-out .25s, transform .15s ease-in-out;
+}
+
+.contactButtons a:nth-child(3) {
+    background-image: url("/resources/whatsapp.png");
+    background-size: cover;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #3D8589;
+    transition: opacity .2s ease-in-out .2s, transform .15s ease-in-out;
+}
+
+.contactActions a i {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contactToggle {
+    -webkit-appearance: none;
+    position: absolute;
+    border-radius: 50%;
+    top: 0; 
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: 0 3px 5px 1px rgba(51, 51, 51, .3);
+}
+
+.contactToggle:hover {
+    box-shadow: 0 3px 6px 2px rgba(51, 51, 51, .3);
+    opacity: 0.6;
+}
+
+.contactToggle:checked ~ .contactButtons a {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* To the top button*/
-    #toTopButton {
-        display: none;
-        position: fixed;
-        z-index: 99;
-        border: none;
-        outline: none;
-        bottom: 3px;
-        right: 3px;
-        cursor: pointer;
-        padding: 15px;
-        background-color: transparent;  
+#toTopButton {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    border: none;
+    outline: none;
+    bottom: 3px;
+    right: 3px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: transparent;  
+}
+.scroll-up-img {
+    width: 40px;
+    height: 40px;
+}
+
+#toTopButton:hover {
+    opacity: 0.6;
+}
+
+@media all and (max-width: 800px)  {
+    .contactButton { 
+        height: 50px;
+        width: 50px;
     }
-    .scroll-up-img {
+    .contactButtons a {
+        display: block;
         width: 40px;
         height: 40px;
     }
-
-    #toTopButton:hover {
-        opacity: 0.6;
+    .scroll-up-img {
+        width: 35px;
+        height: 35px;
     }
+}
+
+@media all and (max-width: 400px)  {
+    .contactActions {
+        right: 1rem;
+    }
+    .contactButton { 
+        height: 35px;
+        width: 35px;
+    }
+    .contactButtons a {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+}
