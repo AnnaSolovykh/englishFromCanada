@@ -708,6 +708,7 @@ nav {
     .prices-container {
         flex-direction: column;
         align-items: center;
+        display: none;
     }
 }
 @media all and (max-width: 800px)  {
@@ -999,7 +1000,6 @@ nav {
 @media all and (max-width: 400px)  {   
     .infographic-containter {
         width: 80%;
-        display: none;
     } 
     .infographic-picture {
         width: 4.5rem;
