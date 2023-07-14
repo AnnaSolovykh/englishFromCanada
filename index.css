@@ -201,6 +201,7 @@ nav {
         align-items: center;
         width: 100%;
     }
+
     .header-person {
         width: 15rem;
         height: min-content;
@@ -219,7 +220,13 @@ nav {
     .icons-container {
         display: none;
     }
+}
 
+@media all and (max-width: 500px) {
+    .btn-header-container {
+        align-self: flex-start;
+        margin-left: 5.5rem;
+    }
 }
 /* ARTICLE */
 
@@ -625,7 +632,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 2rem;
 }
 
 .prices-bg div{
@@ -708,7 +714,6 @@ nav {
     .prices-container {
         flex-direction: column;
         align-items: center;
-        display: none;
     }
 }
 @media all and (max-width: 800px)  {
