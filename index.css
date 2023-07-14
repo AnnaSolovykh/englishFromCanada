@@ -619,8 +619,8 @@ nav {
 
 .prices-container {
     display: flex;
-
 }
+
 .prices-bg {
     background-image: url(resources/prices-bg.png);
     background-size: cover;
@@ -1143,3 +1143,119 @@ iframe  {
         width: 10rem;
     }
 }
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 40;
+    margin-right: 20px;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #3D8589;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    display: none;
+} 
+@media all and (max-width: 600px) {
+    .mobile-nav {
+        position: fixed;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;  
+        width: 87%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 30;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9402354691876751) 5%, rgba(255,255,255,0.9710477941176471) 100%);
+    }
+
+    .mobile-nav .btn {
+        margin-left: 1rem;
+    }
+    .mobile-nav .btn__text {
+        color:#3D8589;
+    }
+    .mobile-nav .btn__circle {
+        box-shadow: 0 0 1px 1px #3D8589;
+    }
+    .mobile-nav .btn__white-circle {
+        background:#3D8589;
+    }
+    
+    .mobile-nav svg {
+        fill: rgb(246,245,243);
+    }
+    .mobile-nav-container{
+        display: flex;
+        justify-content: flex-end;
+    } 
+  
+    .burger {
+        display: block;
+        position: fixed;
+        
+    }
+}
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+    
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+    from{
+        opacity:0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/* To the top button*/
+    #toTopButton {
+        display: none;
+        position: fixed;
+        z-index: 99;
+        border: none;
+        outline: none;
+        bottom: 3px;
+        right: 3px;
+        cursor: pointer;
+        padding: 15px;
+        background-color: transparent;  
+    }
+    .scroll-up-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #toTopButton:hover {
+        opacity: 0.6;
+    }

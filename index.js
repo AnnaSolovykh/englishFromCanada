@@ -1,3 +1,28 @@
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.mobile-nav');
+const navLinks = document.querySelectorAll('.btn');
+
+
+burger.addEventListener('click', navSlide)
+
+function navSlide () {
+  burger.classList.toggle('toggle');
+    nav.classList.toggle('nav-active');
+    navLinks.forEach((link, index)=> {
+        if (link.style.animation) {
+            link.style.animation = '';
+        }
+        else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1.2}s`;
+        }
+        link.addEventListener( 'click', function(){
+          nav.classList.remove('nav-active');
+          burger.classList.remove('toggle');
+        })
+    })
+}
+
+
 let slideIndex = [1,1];
 let slideId = ["mySlides1", "mySlides2"];
 let dotsId = ["Dots1", "Dots2"]
@@ -68,4 +93,22 @@ videos.forEach( (item) => {
 function removePoster() {
   poster.classList.add("iframe-container-active");
   iFrame.src += "?autoplay=1";
+}
+
+
+let toTopButton = document.getElementById("toTopButton");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTopButton.style.display = "block";
+  } else {
+    toTopButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
