@@ -1188,6 +1188,7 @@ iframe  {
     }
 
     .mobile-nav .btn {
+        opacity: 0;
         margin-left: 1rem;
     }
     .mobile-nav .btn__text {
