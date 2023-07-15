@@ -396,7 +396,7 @@ nav {
 
      .article-heading {
         font-size: 1.6rem;
-        line-height: 2rem;
+        line-height: 2.3rem;
     }
 
     .article-subheading {
@@ -432,7 +432,7 @@ nav {
     .list-item {
         font-size: 1rem; 
     }
-    .article-heading {
+    /* .article-heading {
         font-size: 1.4rem;
     }
     .article-subheading {
@@ -441,7 +441,7 @@ nav {
     
     .article-subheading-comment {
         font-size: 1.1rem;
-    }
+    } */
 }
 
 @media all and (max-width: 400px) {
@@ -1465,6 +1465,8 @@ hr {
 
 footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 0 0 2rem 0;
     font-size: 1rem;
@@ -1475,7 +1477,7 @@ footer p {
     font-family: 'Nunito';
 }
 
-footer p a {
+footer a {
     color: var(--green);
     font-family: 'Nunito';
 }
