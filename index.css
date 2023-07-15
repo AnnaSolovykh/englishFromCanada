@@ -485,7 +485,8 @@ nav {
 
 .slider-full-mobile:before {
     content: "";
-    width: 270px;
+    /* width: 270px; */
+    width: 360px;
     background-image: url(reviews/black-phone.png); 
     background-size: 100%;
     background-repeat: no-repeat;
@@ -493,7 +494,8 @@ nav {
     left: 0;
     right: 0;
     top: 0px;
-    height: 570px; 
+    /* height: 570px;  */
+    height: 760px;
     z-index: 2;
     margin: auto;
 
@@ -508,8 +510,10 @@ nav {
 }
 
 .slider-full-mobile .slider-slide img{
-    width: 270px;
-    height: 550px;
+    /* width: 270px; */
+    width: 360px;
+    /* height: 550px; */
+    height: 733px;
     border-radius: 40px;
 }
 
