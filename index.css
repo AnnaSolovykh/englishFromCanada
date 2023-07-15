@@ -508,6 +508,7 @@ nav {
     height: 570px; 
     z-index: 2;
     margin: auto;
+
 }
 .slider-full-mobile .slider-slide {
     height: 100%;
@@ -520,7 +521,7 @@ nav {
 
 .slider-full-mobile .slider-slide img{
     width: 270px;
-    height: 485px;
+    height: 550px;
     border-radius: 40px;
 }
 
@@ -534,7 +535,7 @@ nav {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    margin-top: 7rem; 
+    margin-top: 4rem; 
 }
 
 .active, .dot:hover {
@@ -1456,9 +1457,3 @@ iframe  {
         height: 35px;
     }
 }
-
-/* 
-.click {
-    width: 50%;
-    height: 100%;
-} */

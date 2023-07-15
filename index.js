@@ -25,7 +25,7 @@ function navSlide () {
 
 let slideIndex = [1,1];
 let slideId = ["mySlides1", "mySlides2"];
-let dotsId = ["Dots1", "Dots2"]
+//let dotsId = ["Dots1", "Dots2"]
 
 showSlides(1, 0);
 showSlides(1, 1);
@@ -38,12 +38,10 @@ function currentSlide(n, no) {
   showSlides(slideIndex[no] = n, no);
 }
 
-
-
 function showSlides(n,no) {
   let i;
-  var eachSlider = document.getElementsByClassName(slideId[no]);
-  let eachDot = document.getElementsByClassName(dotsId[no]);
+  let eachSlider = document.getElementsByClassName(slideId[no]);
+  //let eachDot = document.getElementsByClassName(dotsId[no]);
   if (n === undefined){n = ++slideIndex[no]};
   if (n > eachSlider.length) {slideIndex[no] = 1};
   if (n < 1) {slideIndex[no] = eachSlider.length};
@@ -52,11 +50,11 @@ function showSlides(n,no) {
     eachSlider[i].style.display = "none";  
   }
 
-  for (i = 0; i < eachDot.length; i++) {
+  /*for (i = 0; i < eachDot.length; i++) {
     eachDot[i].className = eachDot[i].className.replace(" active", "");
-  }
+  }*/
   eachSlider[slideIndex[no]-1].style.display = "block"; 
-  eachDot[slideIndex[no]-1].className += " active";
+  //eachDot[slideIndex[no]-1].className += " active";
 }
 
 let intervalOne = setInterval(carousel, 3000, 1, 0);
@@ -98,8 +96,6 @@ function removePoster() {
 
 let toTopButton = document.getElementById("toTopButton");
 let contactsContainer = document.querySelector(".contactActions");
-//let constactsButtons = document.querySelectorAll(".contactButtons");
-//let contactsButtonTrigger = document.querySelector(".contactToggle");
 
 
 window.onscroll = function() {
@@ -120,15 +116,5 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-/*
-contactsButtonTrigger.addEventListener("click", ()=> {
-  constactsButtons.forEach((item)=> {
-    item.addEventListener("click", ()=> {
-      item.style.display = "none"
-    })
-    item.style.display = "block"
-  })
-})
 
-*/
 
