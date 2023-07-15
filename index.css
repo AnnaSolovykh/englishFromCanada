@@ -491,7 +491,7 @@ nav {
     .ordered-list-container {
         flex-direction: column;
         align-items: baseline;
-        margin-left: 10rem;
+        width: 70%;
     }
     .phrasal-verbs-pic-container img {
         width: 35rem;
@@ -504,7 +504,6 @@ nav {
     .ordered-list-container {
         flex-direction: column;
         align-items: baseline;
-        margin-left: 6rem;
     }
     .ordered-list-container div li {
         font-size: 1rem;
