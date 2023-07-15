@@ -304,7 +304,7 @@ nav {
     font-family: 'Roboto';
     font-weight: 200;
     font-size: 1.2rem;
-    line-height: 3.3rem; 
+    line-height: 2.8rem; 
     color: var(--black);
 }
 
@@ -1456,3 +1456,9 @@ iframe  {
         height: 35px;
     }
 }
+
+/* 
+.click {
+    width: 50%;
+    height: 100%;
+} */
