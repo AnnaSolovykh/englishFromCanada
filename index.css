@@ -1158,8 +1158,8 @@ iframe  {
 
 
 .mobile-nav {
-    /* display: none; */
-    opacity: 0;
+    display: none; 
+    /* opacity: 0; */
 } 
 
 @media all and (max-width: 600px) {
