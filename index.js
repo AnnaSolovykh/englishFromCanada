@@ -9,13 +9,7 @@ function navSlide () {
   burger.classList.toggle('toggle');
   nav.classList.toggle('nav-active');
   navLinks.forEach((link, index)=> {
-      // if (link.style.animation) {
-      //     link.style.animation = '';
-      // }
-      // else {
-      //     link.style.animation = `navLinkFade 0.1s ease forwards ${index / 7 + 1.2}s`;
-      // }
-      link.style.animation = `navLinkFade 0.1s ease forwards ${index / 7 + 1.2}s`;
+      link.style.animation = `navLinkFade 0.4s ease forwards ${index / 7 + 1.2}s`;
       link.addEventListener( 'click', function(){
         nav.classList.remove('nav-active');
         burger.classList.remove('toggle');
@@ -26,7 +20,6 @@ function navSlide () {
 
 let slideIndex = [1,1];
 let slideId = ["mySlides1", "mySlides2"];
-//let dotsId = ["Dots1", "Dots2"]
 
 showSlides(1, 0);
 showSlides(1, 1);
@@ -42,7 +35,6 @@ function currentSlide(n, no) {
 function showSlides(n,no) {
   let i;
   let eachSlider = document.getElementsByClassName(slideId[no]);
-  //let eachDot = document.getElementsByClassName(dotsId[no]);
   if (n === undefined){n = ++slideIndex[no]};
   if (n > eachSlider.length) {slideIndex[no] = 1};
   if (n < 1) {slideIndex[no] = eachSlider.length};
@@ -50,12 +42,7 @@ function showSlides(n,no) {
   for (i = 0; i < eachSlider.length; i++) {
     eachSlider[i].style.display = "none";  
   }
-
-  /*for (i = 0; i < eachDot.length; i++) {
-    eachDot[i].className = eachDot[i].className.replace(" active", "");
-  }*/
   eachSlider[slideIndex[no]-1].style.display = "block"; 
-  //eachDot[slideIndex[no]-1].className += " active";
 }
 
 let intervalOne = setInterval(carousel, 3000, 1, 0);
