@@ -182,7 +182,16 @@ nav {
     .button-container {
         width: 60%;
     }
+    .header-person {
+        width: 20rem;
+    } 
     
+}
+
+@media all and (max-width: 650px) {
+    .header-person {
+        width: 16rem;
+    } 
 }
 
 @media all and (max-width: 600px) {
@@ -497,7 +506,14 @@ nav {
         width: 35rem;
     }
 }
-@media all and (max-width: 450px) {
+
+@media all and (max-width: 600px) {
+    .phrasal-verbs-pic-container img {
+        width: 30rem;
+    }
+} 
+
+@media all and (max-width: 500px) {
     .phrasal-verbs-pic-container img {
         width: 20rem;
     }
@@ -557,7 +573,6 @@ nav {
 
 .slider-full-mobile:before {
     content: "";
-    /* width: 270px; */
     width: 337px;
     background-image: url(reviews/black-phone.png); 
     background-size: 100%;
@@ -566,7 +581,6 @@ nav {
     left: 0;
     right: 0;
     top: 0px;
-    /* height: 570px;  */
     height: 713px;
     z-index: 2;
     margin: auto;
@@ -582,9 +596,7 @@ nav {
 }
 
 .slider-full-mobile .slider-slide img{
-    /* width: 270px; */
     width: 337px;
-    /* height: 550px; */
     height: 688px;
     border-radius: 40px;
 }
