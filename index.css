@@ -1159,12 +1159,10 @@ iframe  {
 
 .mobile-nav {
     display: none; 
-    /* opacity: 0; */
 } 
 
 @media all and (max-width: 600px) {
     .mobile-nav {
-        /* opacity: 1; */
         position: fixed;
         right: 0;
         height: 100vh;
@@ -1175,7 +1173,6 @@ iframe  {
         justify-content: space-evenly;  
         width: 87%;
         transform: translateX(100%);
-        transition: transform 1s ease-in;
         z-index: 30;
         background: rgb(255,255,255);
         background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9402354691876751) 5%, rgba(255,255,255,0.9710477941176471) 100%);
@@ -1225,6 +1222,7 @@ iframe  {
 
     .nav-active {
         transform: translateX(0%);
+        transition: transform 0.3s ease-in;
     }
     
     @keyframes navLinkFade {
