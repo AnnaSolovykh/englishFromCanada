@@ -230,7 +230,11 @@ nav {
     }
 }
 
+
 @media all and (max-width: 550px) {
+    header {
+        height: 90vh;
+    }
     .btn-header-container {
         align-self: flex-start;
         margin-left: 2rem;
@@ -238,8 +242,11 @@ nav {
 }
 
 @media all and (max-width: 400px) {
+    header {
+        height: 100vh;
+    }
     .logo-heading-container, .header-headning {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 /* ARTICLE */
