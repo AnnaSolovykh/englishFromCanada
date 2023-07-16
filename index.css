@@ -158,6 +158,15 @@ nav {
     }
 }
 
+@media all and (max-width:960px) {
+    .header-person {
+        width: 20rem;
+    } 
+    .button-container {
+        width: 60%;
+    }
+}
+
 @media all and (max-width: 850px)  {
     nav {
         margin-left: 11rem;
@@ -180,22 +189,20 @@ nav {
         width: 2.1rem;
     }
 
-    .button-container {
-        width: 60%;
-    }
     .header-person {
-        width: 20rem;
+        width: 19rem;
+    } 
+    
+}
+
+@media all and (max-width: 700px) {
+    .header-person {
+        width: 16rem;
     } 
     
 }
 
 @media all and (max-width: 650px) {
-    .header-person {
-        width: 16rem;
-    } 
-}
-
-@media all and (max-width: 600px) {
     nav {
         display: none;
     }
@@ -665,37 +672,13 @@ nav {
 }
 
 @media all and (max-width: 500px)  {
-    /* .reviews-container {
-        height: 100%;
-    }
-    .slider-full-mobile:before {
-        width: 170px;
-        height: 400px; 
-    }
-    
-    .slider-full-mobile .slider-slide img{
-        width: 170px;
-        height: 355px;
-    } */
     .btn-arrow {
         width: 3rem;
     }
     .liane {
-        /* width: 4rem; */
         display: none;
     }
 }
-/* @media all and (max-width: 400px)  {
-    .btn-arrow {
-        width: 2.4rem;
-    }
-    .liane {
-        width: 3rem;
-    }
-    .dot {
-        margin-top: 1rem;
-    }
-} */
 
 .prices-container {
     display: flex;
@@ -1248,7 +1231,7 @@ iframe  {
     display: none;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
     .mobile-nav {
         position: fixed;
         right: 0;
