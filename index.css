@@ -698,15 +698,20 @@ nav {
     margin: 0 2rem;
 }
 
-.prices-bg div{
-    padding: 0 2.5rem;
+.prices-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.prices-text-container div{
+    display: flex;
+    align-items: center;
+}
 
 .bullet-tick {
-    width: 1.3rem;
-    margin-right: 0.1rem;
-    vertical-align: bottom; 
+    width: 1.5rem;
+    margin-right: 0.5rem;
 }
 
 .price-item { 
@@ -723,7 +728,7 @@ nav {
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.4rem; 
-    text-align: right;
+    margin-left: 6rem;
     color: var(--black);
 }
 
@@ -735,7 +740,7 @@ nav {
     font-weight: 800;
     font-size: 1.3em;
     line-height: 3rem; 
-    text-align: right;
+    margin-left: 5rem;
     color: var(--red);
 }
 
@@ -842,9 +847,13 @@ nav {
         line-height: 1.6rem; 
         margin: 0;
     }
-
 }
 
+@media all and (max-width: 400px) {
+    .prices-bg {
+        width: 20rem;
+    }
+}
 /* submit button */
 
 
@@ -1217,7 +1226,7 @@ iframe  {
     cursor: pointer;
     z-index: 40;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .burger div{
@@ -1245,7 +1254,7 @@ iframe  {
         transform: translateX(100%);
         z-index: 30;
         background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9402354691876751) 5%, rgba(255,255,255,0.9710477941176471) 100%);
+        background: linear-gradient(90deg, rgba(255,255,255,0.9402354691876751) 5%, rgba(255,255,255,0.9710477941176471) 100%);
     }
 
     .mobile-nav .btn {
