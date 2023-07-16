@@ -38,6 +38,7 @@ header {
 nav {
     display: flex;
     margin-left: 20rem;
+    margin-top: 20px;
     justify-content: space-around;
     height: 11vh;
     align-items: center;
@@ -195,6 +196,10 @@ nav {
 }
 
 @media all and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
     .button-container {
         flex-direction: column-reverse;
         justify-content: space-between;
@@ -208,9 +213,6 @@ nav {
         align-self: flex-start;
     } 
 
-    nav {
-        display: none;
-    }
     .header-subheadning {
         margin-left: 10rem;
         font-size: 1.1rem;
@@ -960,11 +962,6 @@ nav {
     margin-top: 2rem;
 }
 
-.highligted {
-    font-weight: bolder;
-    color: var(--red);
-}
-
 .section-subheading {
     font-family: 'Nunito';
     font-weight: 800;
@@ -1237,6 +1234,7 @@ iframe  {
     cursor: pointer;
     z-index: 40;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .burger div{
@@ -1246,11 +1244,9 @@ iframe  {
     margin: 5px;
     transition: all 0.3s ease;
 }
-
-
 .mobile-nav {
-    display: none; 
-} 
+    display: none;
+}
 
 @media all and (max-width: 600px) {
     .mobile-nav {
@@ -1294,7 +1290,6 @@ iframe  {
     .burger {
         display: block;
         position: fixed;
-        
     }
 }
 
