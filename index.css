@@ -243,7 +243,7 @@ nav {
 
 @media all and (max-width: 400px) {
     header {
-        height: 110vh;
+        height: 100vh;
     }
     .logo-heading-container, .header-headning {
         margin-bottom: 0.5rem;
