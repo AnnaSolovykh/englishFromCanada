@@ -11,12 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
 
-        <nav>
+        <nav             
+            data-aos="fade-down"
+            data-aos-offset="500"
+        >
             <div class="nav-headings-container">
                 <a href="#kids" class="nav-heading">детям</a>
                 <a href="#adults" class="nav-heading">взрослым</a>
@@ -65,16 +68,36 @@
             </div>
         </div>
 
-        <section class="logo-heading-container"> 
+        <section 
+            class="logo-heading-container"
+            data-aos="fade-down"
+            data-aos-offset="500"
+        > 
             <img class="leaf-image" src="/resources/leaf.png"/>
             <h1 class="header-headning" >English From Canada</h1>
             <h2 class="header-subheadning" >С Марией Ельциной</h2>
         </section>
         
         <section class="button-container">
-            <img class="header-person" src="/resources/header-person.png"/>
-            <div class="btn-header-container" data-aos="fade-right">                
-                <div class="content" data-form-type="card">
+            <img 
+                class="header-person" 
+                data-aos="fade-right"
+                data-aos-offset="500"
+                data-aos-duration="500"
+                data-aos-delay="200"
+                src="/resources/header-person.png"
+            />
+            <div 
+                class="btn-header-container"
+                data-aos="fade-right"
+                data-aos-offset="500"
+                data-aos-duration="500"
+                data-aos-delay="300"
+            >                
+                <div 
+                    class="content" 
+                    data-form-type="card"
+                >
                     <a href="#englishOnTerms" class="btn">
                         <span class="btn__circle"></span>
                         <span class="btn__white-circle">
@@ -111,7 +134,7 @@
     </header>
 
     <main>
-        <article class="container-vertical" id="englishOnTerms">
+        <article class="container-vertical" id="englishOnTerms" >
             <img class="decor-img" src="/resources/remote-studying-boy.png" alt="Boy studying remotely with tutor"/>
             <h2 class="article-heading">Английский взрослым</h2>
             
@@ -127,7 +150,11 @@
                 </a>
             </div>
 
-            <section class="container-horizontal">
+            <section 
+                class="container-horizontal" 
+                data-aos="fade-up"
+                data-aos-easing="linear"
+            >
                 <div class="list-container-wrapper">
                     <ul class="list-container">
                         <div>
@@ -178,7 +205,11 @@
                 <img class="decor-img-bigger" src="/resources/education-video.png" alt="Education video on the laptop" />
                 <h3 class="section-heading">Вам подойдет курс, если...</h3>
                 <div class="list-container-wrapper">        
-                    <ul class="list-container">
+                    <ul 
+                    class="list-container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    >
                         <div>
                             <img class="bullet" src="/resources/check.png" alt="red check mark in the circle"/>
                             <li class="list-item">
@@ -211,7 +242,11 @@
 
             <section class="container-vertical">
                 <h3 class="section-heading">Отзывы</h3>
-                <div class="reviews-container">
+                <div 
+                    class="reviews-container"                     
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                >
                     <img class="liane" src="resources/liane.png"/>
             
                         <div class="phone-container phone-container-one">
@@ -269,7 +304,11 @@
                     <h3 class="section-heading">Цены</h3>
                 </div>
                 <div class="prices-container">
-                    <div class="prices-bg">
+                    <div 
+                        class="prices-bg"
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                    >
                         <div class="prices-text-container">
                             <div>
                                 <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -282,7 +321,11 @@
                         </div>
                     </div>
 
-                    <div class="prices-bg">
+                    <div 
+                        class="prices-bg"
+                        data-aos-easing="linear"
+                        data-aos="fade-up"
+                    >
                         <div class="prices-text-container">
                             <div>
                                 <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -298,7 +341,11 @@
                         </div>
                     </div>
 
-                    <div class="prices-bg">
+                    <div 
+                        class="prices-bg"
+                        data-aos-easing="linear"
+                        data-aos="fade-up"
+                    >
                         <div class="prices-text-container">
                             <div>
                                 <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -315,7 +362,9 @@
                     </div>
                 </div>
 
-                <div class="container-horizontal">
+                <div 
+                    class="container-horizontal"
+                >
                     <img class="decor-img"  src="/resources/question-mark.png" alt="Woman standing with a question mark"/>
                     <p class="section-subheading">Жду Вас на бесплатном пробном занятии для знакомства и определения уровня!</p>
                 </div>
@@ -333,7 +382,11 @@
 
             <div class="container-vertical">
                 <div class="list-container-wrapper">
-                    <ul class="list-container">
+                    <ul 
+                        class="list-container"
+                        data-aos-easing="linear"
+                        data-aos="fade-up"
+                    >
                         <div>
                             <img class="bullet" src="/resources/leaf.png" alt="a bullet leaf">
                             <li class="list-item">
@@ -351,7 +404,11 @@
                             <li class="list-item">
                                 Что входит в курс: 
                                 
-                                <ul class="list-container">
+                                <ul 
+                                    class="list-container"
+                                    data-aos="fade-up"
+                                    data-aos-offset="300"
+                                >
                                     <div>
                                         <img class="bullet" src="/resources/check.png" alt="a bullet leaf">
                                         <li class="list-item">
@@ -393,14 +450,22 @@
                         </div>
                     </ul>
                 </div>
-                <div class="phrasal-verbs-pic-container">
+                <div 
+                    class="phrasal-verbs-pic-container"
+                    data-aos-easing="linear"
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                >
                     <img src="resources/phrasal-verbs.png"/>
                 </div>
             </div>
 
             <h3 class="section-heading">Курс подойдет вам, если <br/>
                 вы не знаете фразовых глаголов, которые обозначают:</h3>
-            <ol class="ordered-list-container">
+            <ol 
+                class="ordered-list-container"
+                data-aos-easing="linear"
+                data-aos="fade-up">
                 <div>
                     <li>отговорить кого-то что-то делать</li>
                     <li>висеть на хвосте </li>
@@ -452,7 +517,11 @@
                     <h3 class="section-heading">Цены</h3>
                 </div>
                 <div class="prices-container"  style="justify-content: center;">
-                    <div class="prices-bg">
+                    <div 
+                        class="prices-bg"
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                    >
                         <div class="prices-text-container">
                             <div>
                                 <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -477,7 +546,11 @@
             </div>
 
             <div class="list-container-wrapper">
-                <ul class="list-container">
+                <ul 
+                    class="list-container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                >
                     <div>
                         <img class="bullet" src="/resources/leaf.png" alt="a bullet leaf">
                         <li class="list-item">
@@ -508,7 +581,11 @@
             <section class="container-vertical">
                 <h3 class="section-heading">План детского урока</h3>
 
-                <div class="infographic-containter">
+                <div 
+                    class="infographic-containter"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                >
 
                     <div class="infographic-item" style="align-self: end;">
                         <img class="infographic-picture" src="resources/girl-with-a-notebook.png" alt="woman in online meeting with graphic tablet"/>
@@ -546,7 +623,11 @@
                 </div>
             </section>
 
-            <section class="container-horizontal" >
+            <section 
+                class="container-horizontal" 
+                data-aos="fade-up"
+                data-aos-easing="linear"
+            >
                 <h3 class="section-heading">Посмотреть, 
                     как проходят уроки,  
                     можно здесь
@@ -588,7 +669,11 @@
                 <h2 class="section-heading">Вам подойдет этот курс, если:</h2> 
 
                 <div class="list-container-wrapper">
-                    <ul class="list-container">
+                    <ul 
+                        class="list-container"
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                    >
                         <div>
                             <img class="bullet" src="/resources/check.png" alt="a bullet leaf">
                             <li class="list-item">
@@ -619,7 +704,11 @@
 
             <section class="container-vertical">
                 <h3 class="section-heading">Отзывы</h3>
-                <div class="reviews-container">
+                <div 
+                    class="reviews-container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                >
                     <img class="liane" src="resources/liane.png"/>
             
                         <div class="phone-container phone-container-two">
@@ -671,8 +760,6 @@
                             </div>
                             <img class="btn-arrow" id="next" src="reviews/Double Right.png" onclick="plusSlides(1,1)"/>
                         </div>
-                    
-
 
                     <img class="liane" src="resources/liane-2.png"/>
                 </div> 
@@ -682,7 +769,11 @@
                 <img class="decor-img" src="/resources/payment.png" alt="Payment processed for goods using a debit card and phone" />
                 <h3 class="section-heading">Цены</h3>
                     <div class="prices-container">
-                        <div class="prices-bg">
+                        <div 
+                            class="prices-bg"
+                            data-aos="fade-up"
+                            data-aos-easing="linear"
+                        >
                             <div class="prices-text-container">
                                 <div>
                                     <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -696,7 +787,11 @@
                             </div>
                         </div>
 
-                        <div class="prices-bg">
+                        <div 
+                            class="prices-bg"
+                            data-aos="fade-up"
+                            data-aos-easing="linear"
+                        >
                             <div class="prices-text-container">
                                 <div>
                                     <img class="bullet-tick" src="resources/green checkmark.png" alt=" green checkmark"/>
@@ -713,7 +808,9 @@
                     </div>
                 </div>
 
-                <div class="container-horizontal">
+                <div 
+                    class="container-horizontal"
+                >
                     <img class="decor-img"  src="/resources/question-mark.png" alt="Woman standing with a question mark"/>
                     <p class="section-subheading">Жду Вас на бесплатном пробном занятии для знакомства и определения уровня!</p>
                 </div>
@@ -725,7 +822,11 @@
             <div class="container-horizontal">
                 <h3 class="article-heading">Обо мне</h3>
             </div>
-            <div class="container-horizontal">
+            <div 
+                class="container-horizontal"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+            >
                 <div class="about-me-container">
                     <ul class="list-container about-me-list">
                         <div>
@@ -815,7 +916,11 @@
         </div> 
     </main>
     <hr>
-    <footer>
+    <footer
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+    >
         <p>
             © 2023 Анна Соловых
         </p>
@@ -825,5 +930,9 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
