@@ -128,3 +128,9 @@ a {
     transform: translate(20px, -50%);
   }
 }
+
+@media all and (max-width: 360px) {
+  .btn__text {
+    font-size: 0.8rem;
+  }
+}

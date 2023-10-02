@@ -255,6 +255,17 @@ nav {
         margin-bottom: 0.5rem;
     }
 }
+
+@media all and (max-width: 350px) {
+    .header-headning {
+        font-size: 1.5rem;
+    }
+    
+    .header-subheadning {
+        margin-left: 8rem;
+        font-size: 1rem;
+    }
+}
 /* ARTICLE */
 
 .container-vertical {
@@ -420,7 +431,6 @@ nav {
 }
 
 @media all and (max-width: 600px) {
-
     .list-item {
         font-size: 1.1rem; 
         line-height: 2rem; 
@@ -429,7 +439,7 @@ nav {
         width: 90%;
     } 
 
-     .article-heading {
+    .article-heading {
         font-size: 1.6rem;
         line-height: 2.3rem;
     }
@@ -474,7 +484,17 @@ nav {
         text-align: center;
         width: 80%;
     }
-
+}
+@media all and (max-width: 350px) {
+    .article-subheading {
+        font-size: 1.1rem;
+    }
+    
+    .article-subheading-comment {
+        margin-left: 1rem;
+        width: 250px;
+        font-size: 1rem;
+    }
 }
 
 /* PHRASAL VERBS */
@@ -548,6 +568,12 @@ nav {
     }
     .ordered-list-container div p {
         font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .phrasal-verbs-pic-container img {
+        width: 19rem;
     }
 }
 /* REVIEWS */
@@ -877,13 +903,13 @@ nav {
     }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 415px) {
     .prices-bg {
         width: 20rem;
     }
 }
-/* submit button */
 
+/* submit button */
 
 .submit-container {
     height: 100%;
