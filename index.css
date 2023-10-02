@@ -735,6 +735,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 0 2rem;
+    padding: 10px;
 }
 
 .prices-text-container {
@@ -850,25 +851,24 @@ nav {
     }
 
     .price-item { 
-        font-size: 1.1em;
         line-height: 1.7em; 
         padding: 1rem 0;
     }
 
     .price-item-details {
-        font-size: 0.9rem;
         line-height: 1.3rem; 
     }
 
     .price-p {
-        font-size: 1.1em;
         line-height: 1.6rem; 
     }
 }
 @media all and (max-width: 500px)  {
     .buy-btn {
+        margin-top: 1rem;
         min-width: 150px;
         min-height: 30px;
+        font-size: 1rem;
     }
     
     .prices-bg {
@@ -883,22 +883,23 @@ nav {
     }
 
     .price-item { 
-        font-size: 1.1em;
-        line-height: 1.7em; 
+        font-size: 1em;
+        line-height: 1.2em; 
         padding: 1rem 0;
     }
 
     .price-item-details {
-        font-size: 0.9rem;
+        font-size: 0.9rem; 
         line-height: 1.3rem; 
     }
 
     .price-p {
-        font-size: 1.1em;
+        font-size: 1.3em; 
         line-height: 1.6rem; 
         margin: 0;
     }
     .price-rus-payment {
+        margin-top: 0.9rem;
         font-size: 0.9rem;
     }
 }
@@ -906,6 +907,12 @@ nav {
 @media all and (max-width: 415px) {
     .prices-bg {
         width: 20rem;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .prices-bg {
+        width: 18rem;
     }
 }
 
@@ -1039,7 +1046,6 @@ nav {
 
     .section-heading {
         line-height: 2rem;
-        font-size: 1.4rem;
     }
     .section-subheading {
         font-size: 1.3rem;
@@ -1132,7 +1138,7 @@ nav {
     }
 }
 
-@media all and (max-width: 400px)  {   
+@media all and (max-width: 420px)  {   
     .infographic-containter {
         width: 80%;
     } 
@@ -1151,7 +1157,6 @@ nav {
         width: 30%;
     }
 }
-
 
 .carousel {
     padding: .3em .3em 0;
@@ -1262,7 +1267,6 @@ iframe  {
         transform: rotate(270deg);
         width: 15rem;
     }
-
     .carousel {
         width: 90%;
     }
