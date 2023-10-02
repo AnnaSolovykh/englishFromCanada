@@ -13,6 +13,12 @@ body {
     background-color: #F6F5F3;
 }
 
+a {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer;
+}
+
 :root {
     --red: #AA0211;
     --white: #FFFFFF;
@@ -724,7 +730,7 @@ nav {
 .price-item { 
     font-family: 'Roboto';
     font-weight: 200;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem; 
     text-align: left;
     color: var(--black);
@@ -739,15 +745,34 @@ nav {
     color: var(--black);
 }
 
+.price-rus-payment {
+    margin-top: 1.7rem;
+    font-family: 'Nunito';
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4rem; 
+    color: var(--black);
+}
+
+.price-rus-payment a{
+    color: var(--green);
+}
+
+.price-rus-payment a:hover {
+    color: var(--turquoise);
+    font-family: 'Nunito';
+}
+
+
 .line-through {
     text-decoration: line-through;
 }
 
 .price-p {
     font-weight: 800;
-    font-size: 1.3em;
+    font-size: 1.7em;
     line-height: 3rem; 
-    margin-left: 5rem;
     color: var(--red);
 }
 
@@ -757,20 +782,16 @@ nav {
 }
 
 .buy-btn:hover {
-    transform: translateY(-6px);
-    transition: all 0.3s ease-in-out 0s;
+    transform: translateY(-3px);
 }
 
 .buy-btn {
-    margin-top: 1.7rem;
-    letter-spacing: 1px;
+    margin-top: 0.5rem;
     font-family: 'Merriweather', serif;
-    font-size: 1.3rem;
-    line-height: 1.5;
-    min-width: 200px;
-    min-height: 60px;
+    font-size: 1.4em; 
+    min-width: 180px;
+    min-height: 50px;
     font-family: 'Merriweather', serif;
-    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
@@ -784,9 +805,7 @@ nav {
     outline: none;
     position: relative;
     padding: 10px;
-
-    display: none;
-    /* until payment methods become available */
+    transition: all 0.3s ease-in-out 0s;
 }
 
 @media all and (max-width: 1250px)  {
@@ -797,8 +816,7 @@ nav {
 
     .prices-bg {
         margin: 0;
-    }
-    
+    }    
 }
 @media all and (max-width: 800px)  {
     .bullet-tick {
@@ -853,6 +871,9 @@ nav {
         font-size: 1.1em;
         line-height: 1.6rem; 
         margin: 0;
+    }
+    .price-rus-payment {
+        font-size: 0.9rem;
     }
 }
 
@@ -1327,7 +1348,6 @@ iframe  {
 }
 
 .about-me-container {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1551,11 +1571,16 @@ footer {
 }
 
 footer p {
-    color: var(--darkgreen);
+    color: var(--black);
     font-family: 'Nunito';
 }
 
 footer a {
     color: var(--green);
+    font-family: 'Nunito';
+}
+
+footer a:hover {
+    color: var(--turquoise);
     font-family: 'Nunito';
 }
