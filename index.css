@@ -1020,10 +1020,19 @@ nav {
     font-weight: 800;
     font-size: 1.8rem;
     line-height: 3rem;
-    color: var(--red);
+    color: var(--turquoise);
     width: 35rem;
     text-align: center;
     margin-top: 2rem;
+}
+
+.section-subheading a {
+    color: var(--red);
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.section-subheading a:hover {
+    opacity: 0.5;
 }
 
 @media all and (max-width: 700px) {
@@ -1043,22 +1052,19 @@ nav {
         line-height: 2rem; 
         width: 70%;
     }
-
     .section-heading {
         line-height: 2rem;
     }
     .section-subheading {
-        font-size: 1.3rem;
-        line-height: 2.7rem;
+        font-size: 1.2rem;
+        line-height: 2.3rem;
     }
-
     .submit {
         min-width: 250px;
         min-height: 50px;
         font-size: 1.3rem;
         padding: 1rem;
     }
-
     .submit:before {
         min-width: calc(250px + 12px);
         min-height: calc(50px + 18px);
