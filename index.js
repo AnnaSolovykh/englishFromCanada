@@ -3,7 +3,7 @@ const nav = document.querySelector('.mobile-nav');
 const navLinks = document.querySelectorAll('.btn');
 
 
-burger.addEventListener('click', navSlide)
+burger.addEventListener('click', navSlide);
 
 function navSlide () {
   burger.classList.toggle('toggle');
