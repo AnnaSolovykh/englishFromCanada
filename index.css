@@ -97,7 +97,7 @@ nav {
     align-items: center;
 }
 
-.header-headning {
+.header-heading {
     color: var(--white);
     font-family: 'Merriweather', serif;
     font-size: 3.2rem;
@@ -107,7 +107,7 @@ nav {
     
 }
 
-.header-subheadning {
+.header-subheading {
     color: var(--black);
     font-family: 'Roboto', serif;
     font-size: 2rem;
