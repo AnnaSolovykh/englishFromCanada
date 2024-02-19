@@ -191,11 +191,11 @@ nav {
         font-size: 1.2rem;
     }
 
-    .header-headning {
+    .header-heading {
         font-size: 1.7rem;
     }
     
-    .header-subheadning {
+    .header-subheading {
         font-size: 1.2rem;
     }
 
@@ -234,7 +234,7 @@ nav {
         align-self: flex-start;
     } 
 
-    .header-subheadning {
+    .header-subheading {
         margin-left: 10rem;
         font-size: 1.1rem;
     }
@@ -259,17 +259,17 @@ nav {
     header {
         height: 100vh;
     }
-    .logo-heading-container, .header-headning {
+    .logo-heading-container, .header-heading {
         margin-bottom: 0.5rem;
     }
 }
 
 @media all and (max-width: 350px) {
-    .header-headning {
+    .header-heading {
         font-size: 1.5rem;
     }
     
-    .header-subheadning {
+    .header-subheading {
         margin-left: 8rem;
         font-size: 1rem;
     }
