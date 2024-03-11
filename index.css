@@ -736,8 +736,8 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 22rem;
-    height: 19rem;
+    width: 25rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -747,6 +747,7 @@ nav {
 }
 
 .prices-text-container {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -764,7 +765,7 @@ nav {
 
 .price-item { 
     font-family: 'Roboto';
-    font-weight: 200;
+    font-weight: 500;
     font-size: 1.4rem;
     line-height: 2rem; 
     text-align: left;
@@ -781,7 +782,7 @@ nav {
 }
 
 .price-rus-payment {
-    margin-top: 1.7rem;
+    width: 15rem;
     font-family: 'Nunito';
     font-weight: 200;
     font-size: 1rem;
@@ -799,12 +800,12 @@ nav {
     font-family: 'Nunito';
 }
 
-
 .line-through {
     text-decoration: line-through;
 }
 
 .price-p {
+    margin-top: 0.7rem;
     font-weight: 800;
     font-size: 1.7em;
     line-height: 3rem; 
@@ -822,6 +823,7 @@ nav {
 
 .buy-btn {
     margin-top: 0.5rem;
+    margin-bottom: 1.7rem;
     font-family: 'Merriweather', serif;
     font-size: 1.4em; 
     min-width: 180px;
@@ -873,10 +875,11 @@ nav {
 }
 @media all and (max-width: 500px)  {
     .buy-btn {
-        margin-top: 1rem;
-        min-width: 150px;
+        margin-top: 0.7rem;
+        margin-bottom: 1rem;
+        min-width: 130px;
         min-height: 30px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .prices-bg {
@@ -886,12 +889,12 @@ nav {
     }
 
     .bullet-tick {
-        width: 1rem;
-        margin-right: 0.5rem;
+        width: 1.2rem;
+        margin-right: 0.4rem;
     }
 
     .price-item { 
-        font-size: 1em;
+        font-size: 1.2rem;
         line-height: 1.2em; 
         padding: 1rem 0;
     }
@@ -904,10 +907,8 @@ nav {
     .price-p {
         font-size: 1.3em; 
         line-height: 1.6rem; 
-        margin: 0;
     }
     .price-rus-payment {
-        margin-top: 0.9rem;
         font-size: 0.9rem;
     }
 }
