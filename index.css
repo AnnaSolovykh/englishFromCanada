@@ -101,19 +101,20 @@ nav {
     color: var(--white);
     font-family: 'Merriweather', serif;
     font-size: 3.2rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     line-height: 1.4; 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+    margin-bottom: 2rem;
 }
 
 .header-subheading {
     color: var(--black);
     font-family: 'Roboto', serif;
+    letter-spacing: 0.1rem;
     font-size: 2rem;
     margin-left: 25rem;
     font-weight: 500;
-    line-height: 1.4; 
+    line-height: 1.5; 
 }
 
 .button-container {
@@ -192,11 +193,13 @@ nav {
     }
 
     .header-heading {
-        font-size: 1.7rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
     
     .header-subheading {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .icon {
@@ -213,6 +216,9 @@ nav {
     .header-person {
         width: 16rem;
     } 
+    .header-subheading {
+        margin-left: 20rem;
+    }
     
 }
 
@@ -236,7 +242,7 @@ nav {
 
     .header-subheading {
         margin-left: 10rem;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .icons-container {
@@ -262,15 +268,16 @@ nav {
     .logo-heading-container, .header-heading {
         margin-bottom: 0.5rem;
     }
+    .header-subheading {
+        margin-left: 6rem;
+    }
 }
 
 @media all and (max-width: 350px) {
     .header-heading {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
-    
     .header-subheading {
-        margin-left: 8rem;
         font-size: 1rem;
     }
 }
@@ -315,8 +322,8 @@ nav {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 3.5rem;
+    font-size: 2rem;
+    line-height: 3.7rem;
     text-align: right;
     color: var(--red);
 }
@@ -405,8 +412,8 @@ nav {
     .article-subheading-comment {
         margin-left: 3.5rem;
         width: 500px;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+        font-size: 1.7rem;
+        line-height: 2.7rem;
     }
     
 
@@ -449,7 +456,6 @@ nav {
 
     .article-heading {
         font-size: 1.6rem;
-        line-height: 2.3rem;
     }
 
     .article-subheading {
@@ -460,7 +466,7 @@ nav {
         margin-left: 1.5rem;
         width: 300px;
         font-size: 1.2rem;
-        line-height: 1.5rem;
+        line-height: 1rem;
         margin-top: 1rem;
     }
 
@@ -605,7 +611,7 @@ nav {
 .btn-arrow {
     cursor: pointer;
     width: 3rem;
-    margin: 10px;
+    margin: 30px;
 }
 
 .btn-arrow:hover  {
@@ -691,14 +697,12 @@ nav {
     .reviews-container {
         width: 80%; 
     }
-
     .btn-arrow {
-        width: 3rem;
-        margin: 0;
+        width: 3.5rem;
+        margin: 20px;
     }
     .liane {
         width: 5rem;
-        
     }
 
 }
@@ -716,14 +720,19 @@ nav {
     .dot {
         margin-top: 3rem; 
     }
+    .btn-arrow {
+        width: 4rem;
+        margin: 30px;
+    }
+    .liane {
+        display: none;
+    }
 }
 
 @media all and (max-width: 500px)  {
     .btn-arrow {
         width: 3rem;
-    }
-    .liane {
-        display: none;
+        margin: 15px;
     }
 }
 
