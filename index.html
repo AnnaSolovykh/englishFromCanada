@@ -9,6 +9,7 @@
     <title>Мария Ельцина | English In Canada with Maria Eltsina | Разговорный английский в Канаде</title>
     <link rel="shortcut icon" href="/resources/leaf.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="verbsTest.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -262,7 +263,12 @@
                     <li style="list-style: none;">и другие...</li>
                 </div>
             </ul>
-
+            <div id="quiz-container">
+                <div id="question"></div>
+                <div id="answers"></div>
+                <button id="next-question" style="display:none;">Следующий вопрос</button>
+            </div>
+            
             <section>
                 <div class="container-vertical">
                     <img class="decor-img" src="/resources/payment.png" alt="Payment processed for goods using a debit card and phone" />
@@ -931,6 +937,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="verbsTest.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
