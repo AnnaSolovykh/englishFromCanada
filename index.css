@@ -843,11 +843,10 @@ nav {
     letter-spacing: 1.3px;
     font-weight: 700;
     color: var(--black);
-    background: var(--turquoise);
-    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    background: #F0BB46;
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    box-shadow: 5px 12px 24px #e7d8b8;
     cursor: pointer;
     outline: none;
     position: relative;

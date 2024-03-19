@@ -4,11 +4,12 @@
     --black: #001819;
     --turquoise: #3D8589;
     --green: #025359;
+    --yellow: #F0BB46;
 }
 
 #start-message {
     font-size: 1.3rem;
-    color: var(--black);
+    color: var(--green);
     font-family: 'Merriweather', serif;
     text-shadow: 0px 2px 42px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: 500;
@@ -33,24 +34,24 @@
 }
 
 #start-button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: 400;
-    font-size: 1.2rem;
-    background-color: var(--turquoise);
-    color: var(--white);
+    font-size: 1.5rem;
+    background-color: var(--yellow);
+    color: var(--black);
     border: none;
     border-radius: 20px;
-    padding: 10px 15px;
+    padding: 25px 35px;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 300px;
     margin: 0 auto 20px auto; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 #start-button:hover {
-    background-color: var(--green);
+    background-color: rgb(240, 196, 38);
 }
 
 #quiz-container {
@@ -62,17 +63,17 @@
     border-radius: 8px;
     font-family: 'Roboto', sans-serif;
 }
+
 @media (max-width: 650px) {
     #quiz-container {
         width: 90%; 
-        padding: 10px;
     }
 }
 
 #question {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    color: var(--black);
+    color: var(--green);
     font-size: 1.3rem;
     font-family: 'Roboto';
     font-weight: 400;
@@ -91,14 +92,13 @@
     border-radius: 20px;
     padding: 10px 15px;
     cursor: pointer;
-    display: block;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
     transition: background-color 0.3s ease;
 }
 
-#answers button:hover {
+#answers button:not(:disabled):hover  {
     background-color: var(--green);
 }
 
@@ -106,8 +106,8 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;    
     font-size: 1.2rem;
-    background-color: var(--turquoise);
-    color: var(--white);
+    background-color: var(--yellow);
+    color: var(--green);
     border: none;
     border-radius: 20px;
     padding: 10px 15px;
@@ -116,15 +116,30 @@
     width: 100%;
     margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#next-question:hover {
-    background-color: var(--green);
+.question-counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--turquoise);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#next-question:not(:disabled):hover {
+    box-shadow: 0 4px 12px rgba(243, 193, 58, 0.4); 
+}
+
+#answers button:disabled, #next-question:disabled {
+    cursor:auto;
+    opacity: 0.8; 
 }
 
 #answers .correct-answer {
-    background-color: var(--green);
+    background-color: rgb(15, 112, 15);
     color: var(--white) 
 }
 
@@ -133,13 +148,9 @@
     color: var(--white) !important;
 }
 
-#answers button:disabled {
-    cursor: not-allowed;
-}
-
 .completion-message {
     font-family: 'Merriweather', serif;
-    color: var(--black);
+    color: var(--turquoise);
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 20px;

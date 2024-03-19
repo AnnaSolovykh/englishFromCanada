@@ -4,6 +4,14 @@ function initializeQuiz() {
     const answersContainer = document.getElementById('answers');
     const nextButton = document.getElementById('next-question');
     
+    let questionCounter = document.querySelector('.question-counter');
+    if (!questionCounter) {
+        questionCounter = document.createElement('div');
+        questionCounter.className = 'question-counter';
+        quizContainer.insertBefore(questionCounter, questionContainer);
+    }
+    
+    questionCounter.style.display = 'none';
     questionContainer.style.display = 'none';
     answersContainer.style.display = 'none';
     nextButton.style.display = 'none';
@@ -20,12 +28,14 @@ function initializeQuiz() {
     startButton.id = 'start-button';
     startButton.addEventListener('click', () => {
         startButton.style.display = 'none';
-
+        startMessage.style.display = 'none';
+        imageContainer.style.display = 'none';
         questionContainer.style.display = 'block';
         answersContainer.style.display = 'block';
+        nextButton.style.display = 'block';
+        nextButton.disabled = true;
         displayQuestion(); 
     });
-
     quizContainer.insertBefore(startMessage, questionContainer);
     quizContainer.insertBefore(imageContainer, questionContainer);
     quizContainer.insertBefore(startButton, questionContainer);
@@ -50,7 +60,7 @@ const questions = [
         answer: "out"
     },
     {
-        text: "Как сказать фразовым глаголом? Она сделала ей вчера выговор при всех ее коллегах.",
+        text: "Как сказать фразовым глаголом: она сделала ей вчера выговор при всех ее коллегах.",
         options: ["Знаю", "Не знаю"],
         answer: "Знаю"
     },
@@ -89,44 +99,56 @@ const questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-
 function displayQuestion() {
+    let questionCounter = document.querySelector('.question-counter'); 
+
     const questionContainer = document.getElementById('question');
     const answersContainer = document.getElementById('answers');
     const nextButton = document.getElementById('next-question');
-    
+
+    nextButton.disabled = true; 
+    nextButton.style.display = 'block'; 
+
+    if (currentQuestionIndex < questions.length) {
+        const currentQuestionNumber = currentQuestionIndex + 1; 
+        questionCounter.innerHTML = `Вопрос ${currentQuestionNumber}/${questions.length}`;
+        questionCounter.style.display = 'block';
+    } else {
+        questionCounter.style.display = 'none'; 
+    }
 
     if (currentQuestionIndex >= questions.length) {
-        questionContainer.innerHTML = `<div class='completion-message'>Quiz completed! Your score: ${score}/${questions.length}.</div>`;
+        questionContainer.innerHTML = `<div class='completion-message'>Тест окончен! Твой результат: ${score}/${questions.length}.</div>`;
         answersContainer.innerHTML = '';
-        nextButton.style.display = 'none';
+        nextButton.style.display = 'none'; 
+
         let additionalMessage = '';
-
         if (score >= 8) {
-            additionalMessage = "<div class='course-invitation'>Класс! Ты много знаешь фразовых глаголов. Приходи на мой курс <i>English on Your Terms</i> по YouTube и подкастам, чтобы получить максимум разговорной практики и расширить словарный запас.</div>";
+            additionalMessage = "Класс! Ты много знаешь фразовых глаголов. Приходи на мой курс <i>English on Your Terms</i> по YouTube и подкастам, чтобы получить максимум разговорной практики и расширить словарный запас.";
         } else if (score >= 5) {
-            additionalMessage = "<div class='course-invitation'>Хорошо! Ты уже кое-что знаешь о фразовых глаголах. Иногда они не все поддаются, поэтому тебе точно будет полезен курс <i>Phrasal Verbs</i>, чтобы быть с фразовыми на 'ты' и практиковать их с напарником твоего уровня!</div>";
+            additionalMessage = "Хорошо! Ты уже кое-что знаешь о фразовых глаголах. Иногда они не все поддаются, поэтому тебе точно будет полезен курс <i>Phrasal Verbs</i>, чтобы быть с фразовыми на 'ты' и практиковать их с напарником твоего уровня!";
         } else {
-            additionalMessage = "<div class='course-invitation'>Ты начал знакомиться с фразовыми глаголами и тебе предстоит узнать много интересного! На курсе по <i>Phrasal Verbs</i> узнаешь 70 глаголов продвинутого уровня и научишься их применять в речи.</div>";
+            additionalMessage = "Ты начал знакомиться с фразовыми глаголами и тебе предстоит узнать много интересного! На курсе по <i>Phrasal Verbs</i> узнаешь 70 глаголов продвинутого уровня и научишься их применять в речи.";
         }
-        questionContainer.innerHTML += additionalMessage;
-        return;
+
+        const resultMessage = document.createElement('div');
+        resultMessage.className = 'result-message';
+        resultMessage.innerHTML = additionalMessage;
+        questionContainer.appendChild(resultMessage);
+    } else {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionContainer.textContent = currentQuestion.text;
+        answersContainer.innerHTML = '';
+
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.addEventListener("click", () => selectAnswer(option, button));
+            answersContainer.appendChild(button);
+        });
     }
-    
-
-    const currentQuestion = questions[currentQuestionIndex];
-    questionContainer.textContent = currentQuestion.text;
-    answersContainer.innerHTML = '';
-
-    currentQuestion.options.forEach(option => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.addEventListener("click", () => selectAnswer(option, button));
-        answersContainer.appendChild(button);
-    });
-
-    nextButton.style.display = 'none';
 }
+
 
 function disableAllButtons() {
     const buttons = document.querySelectorAll('#answers button');
@@ -145,6 +167,7 @@ function markAnswerIncorrect(button) {
 
 function selectAnswer(selectedOption, button) {
     disableAllButtons();
+    const nextButton = document.getElementById('next-question');
     const correctAnswer = questions[currentQuestionIndex].answer;
 
     if (selectedOption === correctAnswer) {
@@ -152,13 +175,15 @@ function selectAnswer(selectedOption, button) {
         markAnswerCorrect(button);
     } else {
         markAnswerIncorrect(button);
-    }
-    document.getElementById('next-question').style.display = 'block';
+    }    
+    nextButton.disabled = false;
 }
 
 document.getElementById('next-question').addEventListener('click', () => {
-    currentQuestionIndex++;
-    displayQuestion();
+    if (currentQuestionIndex < questions.length) {
+        currentQuestionIndex++;
+        displayQuestion();
+    }
 });
 
 displayQuestion();
