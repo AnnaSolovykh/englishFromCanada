@@ -990,7 +990,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite; 
+    animation: ring 2s infinite; 
   }
   
   .submit:before, .submit:hover::before, .submit:focus::before {
@@ -1003,9 +1003,14 @@ nav {
     height: 30px;
     opacity: 1;
   }
-  100% {
+  50% {
     width: 300px;
     height: 300px;
+    opacity: 0;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
     opacity: 0;
   }
 }
