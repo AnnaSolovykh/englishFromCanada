@@ -266,6 +266,9 @@ nav {
   header {
     height: 100vh;
   }
+  .header-person {
+    width: 12rem;
+  }
   .logo-heading-container,
   .header-heading {
     margin-bottom: 0.2rem;
