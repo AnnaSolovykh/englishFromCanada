@@ -45,22 +45,22 @@ document.addEventListener('DOMContentLoaded', initializeQuiz);
 
 const questions = [
     {
-        text: "They had a falling off yesterday.",
-        options: ["У них произошла загвоздка", "Они поссорились", "нет правильного ответа"],
+        text: "Как переведешь:  They had a FALLING-OUT?",
+        options: ["У них произошла загвоздка", "Они поссорились", "Нет правильного ответа"],
         answer: "Они поссорились"
     },
     {
-        text: "Как сказать фразовым глаголом: Она всегда сливается в самый последний момент?",
+        text: "Как сказать фразовым глаголом СЛИВАТЬСЯ в последний момент?",
         options: ["Знаю", "Не знаю"],
         answer: "Знаю"
     },
     {
-        text: "Фразовый глагол улаживать проблему: straighten ___?",
+        text: "Фразовый глагол улаживать проблему: STRAIGHTEN  ___?",
         options: ["up", "out", "in"],
         answer: "out"
     },
     {
-        text: "Как сказать фразовым глаголом: она сделала ей вчера выговор при всех ее коллегах.",
+        text: "Как сказать фразовым глаголом СДЕЛАТЬ ВЫГОВОР?",
         options: ["Знаю", "Не знаю"],
         answer: "Знаю"
     },
@@ -70,27 +70,27 @@ const questions = [
         answer: "Предложение неправильное"
     },
     {
-        text: "Как сказать: справиться с задачей",
-        options: ["Pull up", "Pull off", "нет верного ответа"],
+        text: "Как сказать фразовым глаголом СПРАВИТЬСЯ С ЗАДАЧЕЙ?",
+        options: ["Pull up", "Pull off", "Нет верного ответа"],
         answer: "Pull off"
     },
     {
-        text: "Как сказать фразовым глаголом: Встреча еще в силе?",
+        text: "Как сказать фразовым глаголом БЫТЬ В СИЛЕ?",
         options: ["Знаю", "Не знаю"],
         answer: "Знаю"
     },
     {
-        text: "Как сказать фразовым глаголом: отговорить кого-то от чего-то",
+        text: "Как сказать фразовым глаголом ОТГОВОРИТЬ кого-то что-то делать?",
         options: ["Talk somebody from something", "Talk somebody out of something", "Нет верного ответа"],
         answer: "Talk somebody out of something"
     },
     {
-        text: "Знаешь, как сказать на английском эту фразу? Его машина переехала мой велик вчера.",
+        text: "Как сказать фразовым глаголом НАБИРАТЬ ОБОРОТЫ?",
         options: ["Да", "Нет"],
         answer: "Да"
     },
     {
-        text: "Какой глагол используем в обоих случаях: изматывать и изнашиваться (например, одежда)",
+        text: "Какой глагол используем в обоих случаях:  ИЗМАТЫВАТЬ и ИЗНАШИВАТЬСЯ (например одежда)?",
         options: ["wear off", "wear down", "wear out"],
         answer: "wear out"
     }
@@ -137,7 +137,8 @@ function displayQuestion() {
         questionContainer.appendChild(resultMessage);
     } else {
         const currentQuestion = questions[currentQuestionIndex];
-        questionContainer.textContent = currentQuestion.text;
+        const formattedText = currentQuestion.text.replace(/(\b[A-ZА-ЯЁ0-9-]+[A-ZА-ЯЁ0-9-]+\b)/g, '<strong>$1</strong>');
+        questionContainer.innerHTML = formattedText;
         answersContainer.innerHTML = '';
 
         currentQuestion.options.forEach(option => {
