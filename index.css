@@ -542,6 +542,7 @@ nav {
 .phrasal-verbs-pic-container img {
   margin: 2rem 0;
   width: 55rem;
+  border-radius: 10px;
 }
 
 @media all and (max-width: 1120px) {

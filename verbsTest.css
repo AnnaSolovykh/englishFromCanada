@@ -40,7 +40,7 @@
     background-color: var(--yellow);
     color: var(--black);
     border: none;
-    border-radius: 20px;
+    border-radius: 1000px;
     padding: 25px 35px;
     cursor: pointer;
     display: block;
@@ -60,7 +60,7 @@
     background-color: var(--white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 600px; 
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -89,7 +89,7 @@
     font-family: 'Roboto';
     font-weight: 200;
     border: none;
-    border-radius: 20px;
+    border-radius: 1000px;
     padding: 10px 15px;
     cursor: pointer;
     width: 100%;
