@@ -282,6 +282,9 @@ nav {
   .header-heading {
     font-size: 1.6rem;
   }
+  .header-person {
+    width: 10rem;
+  }
   .header-subheading {
     font-size: 1rem;
   }
