@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Single redirect rule to handle both HTTP and non-www to HTTPS www
+RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.maria-english-incanada.com/$1 [L,R=301]
