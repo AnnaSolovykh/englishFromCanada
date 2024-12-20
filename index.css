@@ -396,6 +396,16 @@ nav {
   text-align: center;
 }
 
+.section-heading-without-margin {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 4rem;
+  color: var(--red);
+  text-align: center;
+}
+
 @media all and (max-width: 1200px) {
   .container-horizontal {
     flex-direction: column;
@@ -748,6 +758,7 @@ nav {
 
 .prices-container {
   display: flex;
+  justify-content: center;
 }
 
 .prices-bg {
@@ -779,7 +790,7 @@ nav {
 
 .bullet-tick {
   width: 1.5rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .price-item {
@@ -787,7 +798,7 @@ nav {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2rem;
-  text-align: left;
+  text-align: center;
   color: var(--black);
 }
 
@@ -800,15 +811,36 @@ nav {
   color: var(--black);
 }
 
-.price-rus-payment {
-  width: 15rem;
+.price-acccess {
+  width: 95%;
   font-family: "Nunito";
   font-weight: 200;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4rem;
+  color: var(--green);
+}
+
+.price-rus-payment {
+  width: 20rem;
+  font-family: "Nunito";
+  font-weight: 400;
   font-size: 1rem;
   text-align: center;
   line-height: 1.4rem;
   color: var(--black);
+  margin-bottom: 2%;
 }
+
+/* .price-rus-payment {
+  width: 90%;
+  font-family: "Nunito";
+  font-weight: 200;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4rem;
+  color: var(--black);
+} */
 
 .price-rus-payment a {
   color: var(--green);
@@ -890,6 +922,7 @@ nav {
   .price-p {
     line-height: 1.6rem;
   }
+
 }
 @media all and (max-width: 500px) {
   .buy-btn {
@@ -926,9 +959,9 @@ nav {
     font-size: 1.3em;
     line-height: 1.6rem;
   }
-  .price-rus-payment {
+  /* .price-rus-payment {
     font-size: 0.9rem;
-  }
+  } */
 }
 
 @media all and (max-width: 415px) {
