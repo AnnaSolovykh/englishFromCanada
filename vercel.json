@@ -1,29 +1,16 @@
 {
     "redirects": [
       {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "header",
-            "key": "x-forwarded-proto",
-            "value": "http"
-          }
-        ],
-        "destination": "https://maria-english-incanada.com/:path*",
+        "source": "/",
+        "destination": "https://maria-english-incanada.com",
         "permanent": true,
         "statusCode": 301
-      },
+      }
+    ],
+    "rewrites": [
       {
         "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "www.maria-english-incanada.com"
-          }
-        ],
-        "destination": "https://maria-english-incanada.com/:path*",
-        "permanent": true,
-        "statusCode": 301
+        "destination": "https://maria-english-incanada.com/:path*"
       }
     ]
   }
