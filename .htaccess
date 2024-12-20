@@ -1,6 +1,6 @@
 RewriteEngine On
 
-# Remove www and force HTTPS
+# Single redirect rule to handle both HTTP and www
 RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://maria-english-incanada.com/$1 [L,R=301,END]
+RewriteRule ^(.*)$ https://maria-english-incanada.com/$1 [L,R=301]
