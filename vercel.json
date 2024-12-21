@@ -1,38 +1,27 @@
 {
+    "framework": null,
     "redirects": [
       {
-        "source": "/(.*)",
-        "has": [
-          {
-            "type": "header",
-            "key": "x-forwarded-proto",
-            "value": "http"
-          }
-        ],
-        "permanent": true,
-        "destination": "https://maria-english-incanada.com/$1"
-      },
-      {
-        "source": "/(.*)",
+        "source": "/",
         "has": [
           {
             "type": "host",
             "value": "www.maria-english-incanada.com"
           }
         ],
-        "permanent": true,
-        "destination": "https://maria-english-incanada.com/$1"
-      }
-    ],
-    "headers": [
+        "destination": "https://maria-english-incanada.com",
+        "statusCode": 301
+      },
       {
-        "source": "/(.*)",
-        "headers": [
+        "source": "/:path(.*)",
+        "has": [
           {
-            "key": "Strict-Transport-Security",
-            "value": "max-age=63072000"
+            "type": "host",
+            "value": "www.maria-english-incanada.com"
           }
-        ]
+        ],
+        "destination": "https://maria-english-incanada.com/:path",
+        "statusCode": 301
       }
     ]
   }
