@@ -1,3 +1,4 @@
+// Quiz data with questions and feedback messages
 const quizData = {
     questions: [
         {
@@ -58,15 +59,21 @@ const quizData = {
     }
 };
 
+/**
+ * Main quiz class that handles all quiz functionality
+ */
 class PhrasalVerbQuiz {
     constructor(data, elementsIds) {
+        // Quiz data
         this.questions = data.questions;
         this.feedbackMessages = data.feedbackMessages;
         
+        // Quiz state
         this.currentQuestionIndex = 0;
         this.score = 0;
         this.isTestStarted = false;
         
+        // DOM elements
         this.elements = {
             quizContainer: document.getElementById(elementsIds.quizContainer),
             questionContainer: document.getElementById(elementsIds.questionContainer),
@@ -78,6 +85,9 @@ class PhrasalVerbQuiz {
         this.initializeQuiz();
     }
     
+    /**
+     * Set up the initial quiz environment
+     */
     initializeQuiz() {
         this.elements.questionCounter = document.querySelector('.question-counter');
         if (!this.elements.questionCounter) {
@@ -89,6 +99,7 @@ class PhrasalVerbQuiz {
             );
         }
         
+        // Hide quiz elements until the quiz starts
         this.elements.questionCounter.style.display = 'none';
         this.elements.questionContainer.style.display = 'none';
         this.elements.answersContainer.style.display = 'none';
@@ -96,9 +107,13 @@ class PhrasalVerbQuiz {
         
         this.createStartScreen();
         
+        // Set up next button event handler
         this.elements.nextButton.addEventListener('click', () => this.nextQuestion());
     }
     
+    /**
+     * Create the welcome screen with start button
+     */
     createStartScreen() {
         const startMessage = document.createElement('h2');
         startMessage.textContent = 'Хорошо ли ты владеешь фразовыми глаголами?';
@@ -117,11 +132,16 @@ class PhrasalVerbQuiz {
         this.elements.quizContainer.insertBefore(startButton, this.elements.questionContainer);
     }
     
+    /**
+     * Begin the quiz by hiding start screen and showing quiz elements
+     */
     startQuiz(startButton, startMessage, imageContainer) {
+        // Hide welcome screen elements
         startButton.style.display = 'none';
         startMessage.style.display = 'none';
         imageContainer.style.display = 'none';
         
+        // Show quiz interface
         this.elements.questionContainer.style.display = 'block';
         this.elements.answersContainer.style.display = 'block';
         this.elements.nextButton.style.display = 'block';
@@ -132,6 +152,9 @@ class PhrasalVerbQuiz {
         this.displayQuestion();
     }
     
+    /**
+     * Show the current question or results if quiz is complete
+     */
     displayQuestion() {
         if (this.currentQuestionIndex >= this.questions.length) {
             this.showResults();
@@ -145,6 +168,7 @@ class PhrasalVerbQuiz {
         
         const currentQuestion = this.questions[this.currentQuestionIndex];
         
+        // Format text to highlight phrasal verbs in uppercase
         const formattedText = currentQuestion.text.replace(
             /(\b[A-ZА-ЯЁ0-9-]+[A-ZА-ЯЁ0-9-]+\b)/g, 
             '<strong>$1</strong>'
@@ -153,6 +177,7 @@ class PhrasalVerbQuiz {
         this.elements.questionContainer.innerHTML = formattedText;
         this.elements.answersContainer.innerHTML = '';
         
+        // Create answer buttons
         currentQuestion.options.forEach(option => {
             const button = document.createElement('button');
             button.textContent = option;
@@ -161,6 +186,9 @@ class PhrasalVerbQuiz {
         });
     }
     
+    /**
+     * Update the question counter display
+     */
     updateQuestionCounter() {
         const currentQuestionNumber = this.currentQuestionIndex + 1;
         this.elements.questionCounter.innerHTML = 
@@ -168,6 +196,9 @@ class PhrasalVerbQuiz {
         this.elements.questionCounter.style.display = 'block';
     }
     
+    /**
+     * Handle user answer selection
+     */
     selectAnswer(selectedOption, button) {
         this.disableAllAnswerButtons();
         
@@ -175,6 +206,7 @@ class PhrasalVerbQuiz {
         
         const correctAnswer = this.questions[this.currentQuestionIndex].answer;
         
+        // Check if answer is correct and apply appropriate styling
         if (selectedOption === correctAnswer) {
             this.score++;
             button.classList.add('correct-answer');
@@ -183,6 +215,9 @@ class PhrasalVerbQuiz {
         }
     }
     
+    /**
+     * Disable all answer buttons after selection
+     */
     disableAllAnswerButtons() {
         const buttons = this.elements.answersContainer.querySelectorAll('button');
         buttons.forEach(button => {
@@ -190,6 +225,9 @@ class PhrasalVerbQuiz {
         });
     }
     
+    /**
+     * Move to the next question
+     */
     nextQuestion() {
         if (this.currentQuestionIndex < this.questions.length) {
             this.currentQuestionIndex++;
@@ -197,14 +235,20 @@ class PhrasalVerbQuiz {
         }
     }
     
+    /**
+     * Display the final quiz results and appropriate feedback
+     */
     showResults() {
+        // Hide quiz elements
         this.elements.questionCounter.style.display = 'none';
         this.elements.nextButton.style.display = 'none';
         this.elements.answersContainer.innerHTML = '';
         
+        // Show score
         this.elements.questionContainer.innerHTML = 
             `<div class='completion-message'>Тест окончен! Твой результат: ${this.score}/${this.questions.length}.</div>`;
         
+        // Select appropriate feedback based on score
         let feedbackMessage;
         
         switch (true) {
@@ -219,6 +263,7 @@ class PhrasalVerbQuiz {
                 break;
         }
         
+        // Add feedback message to results
         const resultMessage = document.createElement('div');
         resultMessage.className = 'result-message';
         resultMessage.innerHTML = feedbackMessage;
@@ -226,6 +271,7 @@ class PhrasalVerbQuiz {
     }
 }
 
+// Initialize the quiz when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const elementsIds = {
         quizContainer: 'quiz-container',
