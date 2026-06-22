@@ -29,6 +29,10 @@ button {
   --black: #001819;
   --turquoise: #3d8589;
   --green: #025359;
+  --header-height: 100vh;
+  --header-height: 100svh;
+  --header-height: 100dvh;
+  --header-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* HEADER */
@@ -38,11 +42,13 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 100%;
-  height: 100vh;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  max-height: var(--header-height);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 nav {
@@ -123,7 +129,10 @@ nav {
 .button-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   width: 80%;
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .header-person {
@@ -136,15 +145,9 @@ nav {
   justify-content: space-around;
   width: 30%;
 }
-@media (orientation: landscape) {
-  header {
-    height: 100vh;
-  }
-}
 @media all and (max-width: 2000px) {
     .header-person {
       width: 24rem;
-      height: 100%;
     }
 }
 @media all and (max-width: 1120px) {
@@ -253,9 +256,6 @@ nav {
 }
 
 @media all and (max-width: 550px) {
-  header {
-    height: 90vh;
-  }
   .btn-header-container {
     align-self: flex-start;
     margin-left: 2rem;
@@ -263,9 +263,6 @@ nav {
 }
 
 @media all and (max-width: 400px) {
-  header {
-    height: 100vh;
-  }
   .header-person {
     width: 12rem;
   }
@@ -1354,7 +1351,7 @@ iframe {
   .mobile-nav {
     position: fixed;
     right: 0;
-    height: 100vh;
+    height: var(--header-height);
     top: 0;
     display: flex;
     flex-direction: column;

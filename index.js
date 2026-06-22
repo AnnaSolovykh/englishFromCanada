@@ -1,3 +1,29 @@
+function setViewportHeight() {
+  const height = window.visualViewport?.height ?? window.innerHeight;
+  document.documentElement.style.setProperty('--vh', `${height * 0.01}px`);
+}
+
+function initViewportHeight() {
+  setViewportHeight();
+
+  window.addEventListener('resize', setViewportHeight);
+  window.addEventListener('orientationchange', setViewportHeight);
+  window.addEventListener('load', setViewportHeight);
+  window.addEventListener('pageshow', setViewportHeight);
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', setViewportHeight);
+    window.visualViewport.addEventListener('scroll', setViewportHeight);
+  }
+
+  // In-app browsers (Instagram, Telegram) often report wrong height on first paint
+  [100, 300, 600].forEach((delay) => {
+    setTimeout(setViewportHeight, delay);
+  });
+}
+
+initViewportHeight();
+
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.mobile-nav');
 const navLinks = document.querySelectorAll('.btn');
